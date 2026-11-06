@@ -22,11 +22,11 @@ Tasks are grouped by milestone. Check an item only after its result has been ver
 - [ ] Inspect the supplied prompts and function definitions.
 - [ ] Identify ambiguities that need decisions or experiments.
 - [ ] Define component boundaries and data flow.
-- [ ] Decide the root package and configuration layout.
-- [ ] Create root `pyproject.toml` and `uv.lock`.
+- [x] Decide the root package and configuration layout.
+- [x] Create root `pyproject.toml` and `uv.lock`.
 - [ ] Create the `src` package and module entry point.
-- [ ] Create the required Makefile.
-- [ ] Extend `.gitignore` for generated output and development caches.
+- [x] Create the required Makefile.
+- [x] Extend `.gitignore` for generated output and development caches.
 
 ## M2: Input, models, and CLI
 

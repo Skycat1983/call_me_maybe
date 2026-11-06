@@ -2,5 +2,10 @@ call_me_maybe.pdf
 *.zip
 .agents/
 .codex/
+.venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
 __pycache__/
 *.py[cod]
+data/output/

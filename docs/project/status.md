@@ -4,7 +4,7 @@ Last reviewed: 2026-11-06
 
 ## Current objective
 
-Establish a clear working specification and prepare to inspect the supplied SDK, data, and project configuration before implementation begins.
+Inspect the supplied SDK and data, then define the first implementation architecture before creating the `src` package.
 
 ## Completed
 
@@ -15,17 +15,22 @@ Establish a clear working specification and prepare to inspect the supplied SDK,
 - Archived the consolidated subject as a traceable source document.
 - Split mandatory requirements into focused working documents.
 - Added a documentation index and evaluation checklist.
+- Added the root project configuration and dependency lockfile.
+- Added Pydantic, NumPy, and the local SDK as project dependencies.
+- Added Flake8, Mypy, and pytest as development dependencies.
+- Added the required Makefile targets.
+- Extended `.gitignore` for the virtual environment, caches, and generated output.
 
 ## In progress
 
-- Review the newly split requirements for ambiguity or omissions.
+- Inspect the supplied `llm_sdk` public interface and demonstration data.
 
 ## Next
 
-1. Inspect the supplied `llm_sdk` public interface and behavior.
+1. Document the supplied `llm_sdk` public interface and behavior.
 2. Inspect the demonstration function definitions and prompts.
-3. Reconcile the supplied nested `pyproject.toml` and `uv.lock` with the required root project layout.
-4. Define the first implementation architecture.
+3. Record ambiguities, constraints, and technical decisions found during inspection.
+4. Define component boundaries and data flow.
 5. Create the root project skeleton and CLI.
 
 ## Blockers
