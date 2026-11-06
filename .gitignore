@@ -1,0 +1,6 @@
+call_me_maybe.pdf
+*.zip
+.agents/
+.codex/
+__pycache__/
+*.py[cod]
