@@ -1,8 +1,10 @@
 # Waypoint 001: Repository and Source Files
 
-Date: 2026-11-06  
-Stage: Project foundation  
-Status: Complete
+- Date: 2026-11-06
+- Stage: Project foundation
+- Status: Complete
+
+Voice discussion: [Talking points 001](../talking-points/001-repository-and-source-files.md)
 
 ## Purpose
 

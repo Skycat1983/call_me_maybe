@@ -5,8 +5,8 @@ This register contains observed problems. Planned features belong in
 
 ## I-001: Project environment is not fully synchronized
 
-Status: Open  
-Severity: Blocking SDK experiments  
+- Status: Open
+- Severity: Blocking SDK experiments
 Observed: Waypoint 004
 
 ### Evidence
@@ -28,8 +28,8 @@ or constructing the Qwen model.
 
 ## I-002: Supplied SDK does not currently pass Flake8
 
-Status: Open  
-Severity: Non-blocking during interface study  
+- Status: Open
+- Severity: Non-blocking during interface study
 Observed: Waypoint 004
 
 ### Evidence

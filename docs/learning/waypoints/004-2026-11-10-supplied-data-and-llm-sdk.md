@@ -1,8 +1,10 @@
 # Waypoint 004: Supplied Data and LLM SDK
 
-Date: 2026-11-10  
-Stage: Concept and interface study  
-Status: In progress
+- Date: 2026-11-10
+- Stage: Concept and interface study
+- Status: In progress
+
+Voice discussion: [Talking points 004](../talking-points/004-supplied-data-and-llm-sdk.md)
 
 ## Purpose
 

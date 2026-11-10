@@ -1,8 +1,10 @@
 # Waypoint 002: Requirements and Documentation
 
-Date: 2026-11-06  
-Stage: Requirements analysis  
-Status: Complete
+- Date: 2026-11-06
+- Stage: Requirements analysis
+- Status: Complete
+
+Voice discussion: [Talking points 002](../talking-points/002-requirements-and-documentation.md)
 
 ## Purpose
 

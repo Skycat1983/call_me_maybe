@@ -43,6 +43,8 @@ These documents describe the work as it stands now.
   recording rules, and links to thematic knowledge.
 - [Learning roadmap](learning/roadmap.md): the explain-first sequence for the
   rest of the project.
+- [Waypoint talking points](learning/talking-points/index.md): voice-mode
+  discussion guides for every completed waypoint.
 - [Latest waypoint](learning/waypoints/004-2026-11-10-supplied-data-and-llm-sdk.md):
   supplied data, SDK methods, tokens, logits, imports, and current questions.
 

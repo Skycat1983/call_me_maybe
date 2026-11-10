@@ -68,6 +68,7 @@ Each waypoint should contain:
 Date:
 Stage:
 Status:
+Voice discussion:
 
 ## Purpose
 ## Topics covered
@@ -97,3 +98,5 @@ understood later without reconstructing the original conversation.
 7. Avoid duplicating full explanations across files; link to the canonical
    thematic page.
 8. Use filenames in the form `NNN-YYYY-MM-DD-short-theme.md`.
+9. Add a companion file under `talking-points/` whenever a waypoint is
+   created, and link the two files in both directions.

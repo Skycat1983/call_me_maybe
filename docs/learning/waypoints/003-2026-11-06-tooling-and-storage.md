@@ -1,8 +1,10 @@
 # Waypoint 003: Tooling and Storage
 
-Date: 2026-11-06  
-Stage: Development environment  
-Status: Complete, with one later-discovered environment issue
+- Date: 2026-11-06
+- Stage: Development environment
+- Status: Complete, with one later-discovered environment issue
+
+Voice discussion: [Talking points 003](../talking-points/003-tooling-and-storage.md)
 
 ## Purpose
 

@@ -1,7 +1,7 @@
 # Python Import Resolution in the SDK
 
-Status: Learning reference  
-Source: `llm_sdk/llm_sdk/__init__.py`
+- Status: Learning reference
+- Source: `llm_sdk/llm_sdk/__init__.py`
 
 Learning context: [Waypoint 004](../learning/waypoints/004-2026-11-10-supplied-data-and-llm-sdk.md)
 
