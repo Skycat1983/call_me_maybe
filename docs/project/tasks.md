@@ -20,6 +20,8 @@ Tasks are grouped by milestone. Check an item only after its result has been ver
 
 - [x] Document the public `llm_sdk` interface.
 - [x] Complete and verify the relocated project environment.
+- [x] Create and run the first public-interface SDK probe.
+- [ ] Resolve or explain the model-construction dependency/device issue.
 - [ ] Confirm observable SDK behavior with small experiments.
 - [x] Inspect the supplied prompts and function definitions.
 - [ ] Identify ambiguities that need decisions or experiments.

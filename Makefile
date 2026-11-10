@@ -9,12 +9,11 @@ export UV_PROJECT_ENVIRONMENT
 export UV_CACHE_DIR
 export HF_HOME
 export UV_LINK_MODE
-unexport VIRTUAL_ENV
 
 # An already activated environment must not override this project's location.
 unexport VIRTUAL_ENV
 
-.PHONY: install run debug clean lint lint-strict test
+.PHONY: install run debug clean lint lint-strict test inspect-sdk
 
 install:
 	uv sync
@@ -43,3 +42,6 @@ lint-strict:
 
 test:
 	uv run pytest
+
+inspect-sdk:
+	uv run python experiments/inspect_sdk.py

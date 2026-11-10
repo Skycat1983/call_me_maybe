@@ -4,7 +4,7 @@ Last reviewed: 2026-11-10
 
 ## Current objective
 
-Confirm the supplied SDK's public behavior through small experiments before defining the first implementation architecture.
+Choose and run a controlled follow-up to the first model-construction failure before defining the application architecture.
 
 ## Completed
 
@@ -30,22 +30,27 @@ Confirm the supplied SDK's public behavior through small experiments before defi
 - Completed dependency synchronization and verified the public SDK imports.
 - Removed the incomplete local `.venv`, restoring home usage to 66%.
 - Recorded the repair and storage model in waypoint 005.
+- Added and validated a reusable public-interface SDK probe.
+- Reproduced and documented the first model-construction failure.
 
 ## In progress
 
-- Prepare the first model-backed public-interface experiments.
+- Discuss the waypoint 006 evidence and choose the next controlled experiment.
 
 ## Next
 
-1. Construct the required model with its cache under `/tmp`.
-2. Test encode/decode behavior and inspect public tokenizer files.
-3. Inspect one next-token logits result.
-4. Record results in waypoint 006 and resolve the related open questions.
-5. Define component boundaries and data flow after the experiments.
+1. Discuss whether to test explicit CPU, supplied dependency versions, or
+   `accelerate` first.
+2. Run only the selected controlled experiment.
+3. If construction succeeds, continue encode/decode, tokenizer, and logits
+   observations.
+4. Record the result in waypoint 007.
+5. Define component boundaries only after SDK behavior is understood.
 
 ## Blockers
 
-None currently recorded.
+- Issue `I-003`: default model construction stops at the Transformers
+  device-map check because `accelerate` is unavailable.
 
 ## Active references
 

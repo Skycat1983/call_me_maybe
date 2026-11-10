@@ -1,0 +1,1 @@
+The LLM helps us choose the function and arguments, while our code forces the JSON shape

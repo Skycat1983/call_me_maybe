@@ -72,3 +72,22 @@ exactly `prompt`, `name`, and `parameters`.
 
 Next step: keep file-level errors separate from successful output and record a
 design decision before implementing per-prompt failure behavior.
+
+## Q-006: Which model-loading compatibility strategy should we test?
+
+- Status: Open
+- Opened: [Waypoint 006](../learning/waypoints/006-2026-11-10-first-sdk-probe.md)
+- Theme: SDK dependencies and device loading
+
+Default `Small_LLM_Model()` construction failed because the observed
+Transformers device-loading path requires `accelerate`.
+
+Candidate controlled experiments:
+
+1. Current versions with explicit `device="cpu"`.
+2. Supplied SDK lock versions with the default constructor.
+3. Add `accelerate` and retain the current versions.
+4. Compare a small matrix of version and device choices.
+
+The choice should consider project dependency restrictions, the supplied
+lockfile, and the principle of changing one variable at a time.

@@ -7,6 +7,8 @@ Learning context: [Waypoint 004](../learning/waypoints/004-2026-11-10-supplied-d
 
 Environment update: [Waypoint 005](../learning/waypoints/005-2026-11-10-environment-repair-and-cache-placement.md)
 
+First runtime probe: [Waypoint 006](../learning/waypoints/006-2026-11-10-first-sdk-probe.md)
+
 ## What the SDK is
 
 The supplied SDK wraps a Hugging Face causal language model in
@@ -47,6 +49,11 @@ HF_HOME=/tmp/call-me-maybe-huggingface
 
 The Makefile also exports the relocated project environment and `uv` cache.
 These are local development decisions, not project requirements.
+
+The first default-constructor probe failed before model weights loaded because
+the observed Transformers device-map path required `accelerate`. The supplied
+SDK does not declare that package. A compatibility strategy has not yet been
+chosen; see Waypoint 006 and issue `I-003`.
 
 ## Construction
 

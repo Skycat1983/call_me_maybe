@@ -45,8 +45,9 @@ These documents describe the work as it stands now.
   rest of the project.
 - [Waypoint talking points](learning/talking-points/index.md): voice-mode
   discussion guides for every completed waypoint.
-- [Latest waypoint](learning/waypoints/005-2026-11-10-environment-repair-and-cache-placement.md):
-  environment repair, cache placement, verification, and storage tradeoffs.
+- [Latest waypoint](learning/waypoints/006-2026-11-10-first-sdk-probe.md):
+  first model-construction probe, observed failure, evidence, and controlled
+  follow-up options.
 
 ### Reference
 

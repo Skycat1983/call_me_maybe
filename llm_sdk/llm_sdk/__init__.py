@@ -108,8 +108,10 @@ class Small_LLM_Model:
         # Get logits for the last token in the sequence for the batch (batch size 1)
         logits = out.logits[0, -1].tolist()
         return [float(x) for x in logits]
-        #! logit is preference ranking. probability has to add to 100 (hence why this is logit not prob)
-
+        #! logits are the preference ranking. 
+# this is not probability, which has to add to 100\
+# logits are the raw scores for next probably tokens
+# we look at these scores so we can constrain the decoding of the file we create to valid JSON structure
 
     def get_path_to_vocab_file(self) -> str:
         vocab_file_name = self._tokenizer.vocab_files_names.get('vocab_file', "vocab.json")
