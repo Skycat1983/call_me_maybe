@@ -1,10 +1,10 @@
 # Project Status
 
-Last reviewed: 2026-11-06
+Last reviewed: 2026-11-10
 
 ## Current objective
 
-Inspect the supplied SDK and data, then define the first implementation architecture before creating the `src` package.
+Confirm the supplied SDK's public behavior through small experiments before defining the first implementation architecture.
 
 ## Completed
 
@@ -20,25 +20,35 @@ Inspect the supplied SDK and data, then define the first implementation architec
 - Added Flake8, Mypy, and pytest as development dependencies.
 - Added the required Makefile targets.
 - Extended `.gitignore` for the virtual environment, caches, and generated output.
+- Inspected the demonstration prompts and function definitions.
+- Documented the SDK's imports, construction, public methods, state, tokens,
+  and logits.
+- Established numbered learning waypoint logs with detailed questions and
+  answers.
+- Added open-question and known-issue registers.
 
 ## In progress
 
-- Inspect the supplied `llm_sdk` public interface and demonstration data.
+- Review the SDK explanations and prepare small public-interface experiments.
 
 ## Next
 
-1. Document the supplied `llm_sdk` public interface and behavior.
-2. Inspect the demonstration function definitions and prompts.
-3. Record ambiguities, constraints, and technical decisions found during inspection.
+1. Complete `uv sync` and verify that `llm_sdk` imports.
+2. Test encode/decode behavior and inspect public tokenizer files.
+3. Record results in waypoint 005 and resolve the related open questions.
 4. Define component boundaries and data flow.
-5. Create the root project skeleton and CLI.
+5. Create the root project skeleton and CLI only after the design is understood.
 
 ## Blockers
 
-None currently recorded.
+- SDK experiments are blocked until issue `I-001`, the incomplete project
+  environment, is resolved.
 
 ## Active references
 
 - [Documentation index](../index.md)
 - [Requirements overview](../requirements/overview.md)
 - [Task plan](tasks.md)
+- [Learning log](../learning/index.md)
+- [Open questions](questions.md)
+- [Known issues](issues.md)

@@ -1,6 +1,6 @@
 # Project Tasks
 
-Last reviewed: 2026-11-06
+Last reviewed: 2026-11-10
 
 Tasks are grouped by milestone. Check an item only after its result has been verified.
 
@@ -18,8 +18,9 @@ Tasks are grouped by milestone. Check an item only after its result has been ver
 
 ## M1: Supplied materials and project foundation
 
-- [ ] Document the public `llm_sdk` interface and observable behavior.
-- [ ] Inspect the supplied prompts and function definitions.
+- [x] Document the public `llm_sdk` interface.
+- [ ] Confirm observable SDK behavior with small experiments.
+- [x] Inspect the supplied prompts and function definitions.
 - [ ] Identify ambiguities that need decisions or experiments.
 - [ ] Define component boundaries and data flow.
 - [x] Decide the root package and configuration layout.
