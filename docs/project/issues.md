@@ -5,9 +5,10 @@ This register contains observed problems. Planned features belong in
 
 ## I-001: Project environment is not fully synchronized
 
-- Status: Open
-- Severity: Blocking SDK experiments
-Observed: Waypoint 004
+- Status: Resolved
+- Severity: Was blocking SDK experiments
+- Observed: Waypoint 004
+- Resolved: [Waypoint 005](../learning/waypoints/005-2026-11-10-environment-repair-and-cache-placement.md)
 
 ### Evidence
 
@@ -17,20 +18,23 @@ An import-only command failed:
 ModuleNotFoundError: No module named 'transformers'
 ```
 
-The current `.venv` contains `torch`, `huggingface-hub`, and `llm-sdk`, but
-does not contain `transformers`, even though it is a dependency of
-`llm-sdk`.
+The original `.venv` contained `torch`, `huggingface-hub`, and `llm-sdk`, but
+did not contain `transformers`, even though it is a dependency of `llm-sdk`.
 
-### Next action
+### Resolution
 
-Run a complete `uv sync`, then repeat the import-only check before downloading
-or constructing the Qwen model.
+The Makefile now exports `UV_PROJECT_ENVIRONMENT`,
+`UV_CACHE_DIR`, and `HF_HOME` paths under `/tmp`. A complete `make install`
+created the relocated environment and an import-only check succeeded with
+`transformers 5.20.2`.
+
+The incomplete local `.venv` was removed after verification.
 
 ## I-002: Supplied SDK does not currently pass Flake8
 
 - Status: Open
 - Severity: Non-blocking during interface study
-Observed: Waypoint 004
+- Observed: Waypoint 004
 
 ### Evidence
 

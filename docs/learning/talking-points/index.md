@@ -40,6 +40,7 @@ Unless a waypoint says otherwise, the agent should:
 | 002 | [Requirements and documentation](002-requirements-and-documentation.md) | Requirement extraction and human-centered documentation |
 | 003 | [Tooling and storage](003-tooling-and-storage.md) | `uv`, dependencies, lockfiles, Makefile, environments, and caches |
 | 004 | [Supplied data and LLM SDK](004-supplied-data-and-llm-sdk.md) | Data contracts, model loading, tokens, logits, imports, and constrained decoding |
+| 005 | [Environment repair and cache placement](005-environment-and-cache-placement.md) | Installed environments, package caches, model caches, and reproducibility |
 
 ## File convention
 

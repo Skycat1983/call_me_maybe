@@ -1,3 +1,19 @@
+# Keep the environment and re-downloadable caches off the small home partition.
+# Callers can override any path, for example: make UV_CACHE_DIR=/other install
+UV_PROJECT_ENVIRONMENT ?= /tmp/call-me-maybe-venv
+UV_CACHE_DIR ?= /tmp/call-me-maybe-uv-cache
+HF_HOME ?= /tmp/call-me-maybe-huggingface
+UV_LINK_MODE ?= copy
+
+export UV_PROJECT_ENVIRONMENT
+export UV_CACHE_DIR
+export HF_HOME
+export UV_LINK_MODE
+unexport VIRTUAL_ENV
+
+# An already activated environment must not override this project's location.
+unexport VIRTUAL_ENV
+
 .PHONY: install run debug clean lint lint-strict test
 
 install:

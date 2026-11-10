@@ -26,23 +26,26 @@ Confirm the supplied SDK's public behavior through small experiments before defi
 - Established numbered learning waypoint logs with detailed questions and
   answers.
 - Added open-question and known-issue registers.
+- Relocated the project environment and re-downloadable caches to `/tmp`.
+- Completed dependency synchronization and verified the public SDK imports.
+- Removed the incomplete local `.venv`, restoring home usage to 66%.
+- Recorded the repair and storage model in waypoint 005.
 
 ## In progress
 
-- Review the SDK explanations and prepare small public-interface experiments.
+- Prepare the first model-backed public-interface experiments.
 
 ## Next
 
-1. Complete `uv sync` and verify that `llm_sdk` imports.
+1. Construct the required model with its cache under `/tmp`.
 2. Test encode/decode behavior and inspect public tokenizer files.
-3. Record results in waypoint 005 and resolve the related open questions.
-4. Define component boundaries and data flow.
-5. Create the root project skeleton and CLI only after the design is understood.
+3. Inspect one next-token logits result.
+4. Record results in waypoint 006 and resolve the related open questions.
+5. Define component boundaries and data flow after the experiments.
 
 ## Blockers
 
-- SDK experiments are blocked until issue `I-001`, the incomplete project
-  environment, is resolved.
+None currently recorded.
 
 ## Active references
 

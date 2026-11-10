@@ -45,8 +45,8 @@ These documents describe the work as it stands now.
   rest of the project.
 - [Waypoint talking points](learning/talking-points/index.md): voice-mode
   discussion guides for every completed waypoint.
-- [Latest waypoint](learning/waypoints/004-2026-11-10-supplied-data-and-llm-sdk.md):
-  supplied data, SDK methods, tokens, logits, imports, and current questions.
+- [Latest waypoint](learning/waypoints/005-2026-11-10-environment-repair-and-cache-placement.md):
+  environment repair, cache placement, verification, and storage tradeoffs.
 
 ### Reference
 

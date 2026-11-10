@@ -25,8 +25,9 @@ pages should link back to a waypoint when historical context matters.
 | [002](waypoints/002-2026-11-06-requirements-and-documentation.md) | 2026-11-06 | Requirements and documentation | PDF converted into a navigable working specification. |
 | [003](waypoints/003-2026-11-06-tooling-and-storage.md) | 2026-11-06 | Tooling and storage | Root dependency configuration and Makefile added; profile storage cleaned. |
 | [004](waypoints/004-2026-11-10-supplied-data-and-llm-sdk.md) | 2026-11-10 | Supplied data and LLM SDK | Data contracts and the SDK's public interface explained; first runtime issues identified. |
+| [005](waypoints/005-2026-11-10-environment-repair-and-cache-placement.md) | 2026-11-10 | Environment and cache placement | Complete environment moved to `/tmp`; SDK imports verified and home space restored. |
 
-The next waypoint ID is **005**.
+The next waypoint ID is **006**.
 
 ## Current registers
 
@@ -36,6 +37,8 @@ The next waypoint ID is **005**.
 - [Project status](../project/status.md): immediate objective and next actions.
 - [Project tasks](../project/tasks.md): implementation work by milestone.
 - [Learning roadmap](roadmap.md): the intended sequence of concepts and work.
+- [Waypoint talking points](talking-points/index.md): voice-mode discussion
+  guides paired with every waypoint.
 
 ## Current thematic documents
 

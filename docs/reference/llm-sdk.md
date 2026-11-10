@@ -5,6 +5,8 @@
 
 Learning context: [Waypoint 004](../learning/waypoints/004-2026-11-10-supplied-data-and-llm-sdk.md)
 
+Environment update: [Waypoint 005](../learning/waypoints/005-2026-11-10-environment-repair-and-cache-placement.md)
+
 ## What the SDK is
 
 The supplied SDK wraps a Hugging Face causal language model in
@@ -31,22 +33,20 @@ There are three separate layers:
 3. Constructing `Small_LLM_Model()` loads the Qwen tokenizer and model. If
    their files are not cached, Hugging Face downloads them at that time.
 
-The current environment is incomplete: an import-only test found
-`transformers` missing from `.venv`. It has not been fully synced with the
-current lockfile, and dependency installation must finish before the SDK can
-import.
+The project environment has been fully synchronized at
+`/tmp/call-me-maybe-venv`. An import-only test succeeded with
+`transformers 5.20.2`. This verifies package availability without constructing
+or downloading the Qwen model.
 
-Model downloads normally use the home-directory Hugging Face cache. Because
-this machine has a small home partition, use a cache on the larger `/tmp`
-filesystem during experiments:
+Model downloads normally use the home-directory Hugging Face cache. The
+Makefile exports this cache location on the larger `/tmp` filesystem:
 
-```bash
-HF_HOME=/tmp/call-me-maybe-huggingface \
-uv run python ...
+```text
+HF_HOME=/tmp/call-me-maybe-huggingface
 ```
 
-This is an environment decision for local development, not a project
-requirement.
+The Makefile also exports the relocated project environment and `uv` cache.
+These are local development decisions, not project requirements.
 
 ## Construction
 

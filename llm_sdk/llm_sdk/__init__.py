@@ -84,6 +84,7 @@ class Small_LLM_Model:
             p.requires_grad = False
 
 
+    # turn text into number. logits tell us which 
     def encode(self, text: str) -> torch.Tensor:
         """Tokenise *text* and return a 2-D ``input_ids`` tensor on the target device."""
         ids = self._tokenizer.encode(text, add_special_tokens=False)
@@ -107,6 +108,7 @@ class Small_LLM_Model:
         # Get logits for the last token in the sequence for the batch (batch size 1)
         logits = out.logits[0, -1].tolist()
         return [float(x) for x in logits]
+        #! logit is preference ranking. probability has to add to 100 (hence why this is logit not prob)
 
 
     def get_path_to_vocab_file(self) -> str:

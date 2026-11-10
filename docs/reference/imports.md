@@ -66,8 +66,20 @@ Python searches locations listed in `sys.path`. These generally include:
 3. The active environment's `site-packages`.
 4. Any explicitly configured additional paths.
 
-`uv run` selects the project's virtual environment, so third-party imports are
-resolved from `.venv` after `uv sync` installs them.
+`uv run` selects the project's configured virtual environment, so third-party
+imports are resolved there after `uv sync` installs them.
+
+For this machine, the Makefile exports:
+
+```text
+UV_PROJECT_ENVIRONMENT=/tmp/call-me-maybe-venv
+UV_CACHE_DIR=/tmp/call-me-maybe-uv-cache
+HF_HOME=/tmp/call-me-maybe-huggingface
+```
+
+The first path contains installed Python packages. The second contains
+re-downloadable `uv` artifacts. The third is reserved for model and tokenizer
+files.
 
 The local SDK is declared in the root `pyproject.toml`:
 
@@ -106,10 +118,10 @@ different times.
 ## Editor “go to definition”
 
 An editor can navigate into imported code only when its Python language server
-uses the correct interpreter. For this project, select:
+uses the correct interpreter. On this machine, select:
 
 ```text
-<project>/.venv/bin/python
+/tmp/call-me-maybe-venv/bin/python
 ```
 
 Once dependencies are completely installed and the editor has indexed that
@@ -117,6 +129,6 @@ environment, “go to definition” should open library source or type
 information. If it cannot resolve an import, first verify:
 
 1. The selected interpreter.
-2. That `uv sync` completed.
+2. That `make install` or an equivalent configured `uv sync` completed.
 3. That the package appears in `uv pip list`.
 4. That an import-only command succeeds.
