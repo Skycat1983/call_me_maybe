@@ -44,6 +44,16 @@ Unless a waypoint says otherwise, the agent should:
 | 006 | [First SDK probe](006-first-sdk-probe.md) | Constructor failure, dependency versions, device mapping, and experiment choice |
 | 007 | [Explicit-CPU SDK probe](007-explicit-cpu-sdk-probe.md) | Successful model loading, token tensors, decode behavior, tokenizer files, and logits |
 
+## Thematic agent briefings
+
+These longer files give a voice agent enough context to handle detailed
+follow-up questions about one subject without reconstructing several
+waypoints first.
+
+- [`inspect_sdk.py` agent briefing](inspect-sdk-agent-briefing.md): provenance,
+  command path, source walkthrough, data flow, actual experiment results,
+  limitations, likely questions, misconceptions, and discussion guidance.
+
 ## File convention
 
 Each waypoint `NNN-YYYY-MM-DD-theme.md` gets a companion:

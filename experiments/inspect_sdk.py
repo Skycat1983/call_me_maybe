@@ -1,4 +1,8 @@
-"""Inspect the supplied LLM SDK through its public interface."""
+"""Inspect the supplied LLM SDK through its public interface.
+
+This learning probe was authored locally during Waypoints 006 and 007. It is
+not part of the supplied SDK or project subject.
+"""
 
 from argparse import ArgumentParser
 from collections.abc import Callable
@@ -10,11 +14,16 @@ from llm_sdk import Small_LLM_Model
 
 PROMPT = "What is the sum of 2 and 3?"
 TOP_CANDIDATE_COUNT = 10
+# ? was this supplied to us or did we write it??
 
 
 def parse_device_argument() -> str | None:
     """Return an optional public SDK device override."""
+    # ? what does this docstring mean here? what is the override?
+    # ? what are device arguments? why is it useful?
+    # ? what is __doc__?
     parser = ArgumentParser(description=__doc__)
+    # ? why these specific arguments?
     parser.add_argument(
         "--device",
         choices=("cpu", "cuda", "mps"),

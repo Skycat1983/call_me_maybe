@@ -3,6 +3,9 @@
 Companion waypoint:
 [007 — Explicit-CPU SDK probe](../waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md)
 
+Detailed topic briefing:
+[`inspect_sdk.py` agent briefing](inspect-sdk-agent-briefing.md)
+
 ## Agent preparation
 
 Read:
