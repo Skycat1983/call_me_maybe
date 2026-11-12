@@ -27,8 +27,9 @@ pages should link back to a waypoint when historical context matters.
 | [004](waypoints/004-2026-11-10-supplied-data-and-llm-sdk.md) | 2026-11-10 | Supplied data and LLM SDK | Data contracts and the SDK's public interface explained; first runtime issues identified. |
 | [005](waypoints/005-2026-11-10-environment-repair-and-cache-placement.md) | 2026-11-10 | Environment and cache placement | Complete environment moved to `/tmp`; SDK imports verified and home space restored. |
 | [006](waypoints/006-2026-11-10-first-sdk-probe.md) | 2026-11-10 | First SDK runtime probe | Default model construction reproduced an `accelerate`/device-map failure before inference. |
+| [007](waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md) | 2026-11-12 | Explicit-CPU SDK probe | Model loaded; encode/decode, tokenizer files, and one logits vector were observed. |
 
-The next waypoint ID is **007**.
+The next waypoint ID is **008**.
 
 ## Current registers
 

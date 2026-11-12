@@ -1,5 +1,6 @@
 """Inspect the supplied LLM SDK through its public interface."""
 
+from argparse import ArgumentParser
 from collections.abc import Callable
 from heapq import nlargest
 from pathlib import Path
@@ -9,6 +10,17 @@ from llm_sdk import Small_LLM_Model
 
 PROMPT = "What is the sum of 2 and 3?"
 TOP_CANDIDATE_COUNT = 10
+
+
+def parse_device_argument() -> str | None:
+    """Return an optional public SDK device override."""
+    parser = ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--device",
+        choices=("cpu", "cuda", "mps"),
+        help="Pass an explicit device to Small_LLM_Model.",
+    )
+    return parser.parse_args().device
 
 
 def print_heading(title: str) -> None:
@@ -33,11 +45,13 @@ def inspect_tokenizer_file(
 
 def main() -> None:
     """Run the public-interface SDK experiment."""
+    requested_device = parse_device_argument()
     print_heading("Model construction")
     print("model identifier: Qwen/Qwen3-0.6B")
+    print(f"requested device: {requested_device or 'automatic'}")
 
     construction_started = perf_counter()
-    model = Small_LLM_Model()
+    model = Small_LLM_Model(device=requested_device)
     construction_seconds = perf_counter() - construction_started
     print(f"construction time: {construction_seconds:.3f} seconds")
 

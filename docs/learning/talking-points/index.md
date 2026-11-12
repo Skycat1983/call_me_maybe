@@ -42,6 +42,7 @@ Unless a waypoint says otherwise, the agent should:
 | 004 | [Supplied data and LLM SDK](004-supplied-data-and-llm-sdk.md) | Data contracts, model loading, tokens, logits, imports, and constrained decoding |
 | 005 | [Environment repair and cache placement](005-environment-and-cache-placement.md) | Installed environments, package caches, model caches, and reproducibility |
 | 006 | [First SDK probe](006-first-sdk-probe.md) | Constructor failure, dependency versions, device mapping, and experiment choice |
+| 007 | [Explicit-CPU SDK probe](007-explicit-cpu-sdk-probe.md) | Successful model loading, token tensors, decode behavior, tokenizer files, and logits |
 
 ## File convention
 

@@ -11,6 +11,17 @@ Run:
 make inspect-sdk
 ```
 
+To change only the public constructor's device argument while preserving the
+rest of the probe:
+
+```bash
+make inspect-sdk-cpu
+```
+
+The default target preserves the original automatic-device failure for
+comparison. The CPU target tests whether avoiding automatic device mapping
+also avoids the `accelerate` requirement.
+
 The Makefile ensures that:
 
 - Python packages come from `/tmp/call-me-maybe-venv`;
@@ -29,3 +40,12 @@ The Makefile ensures that:
 
 The corresponding findings belong in a numbered learning waypoint. Do not
 turn this experiment into production code.
+
+The default probe reproduced a device-map requirement for `accelerate`.
+The controlled CPU probe succeeded:
+
+```bash
+make inspect-sdk-cpu
+```
+
+Its results are recorded in Waypoint 007.

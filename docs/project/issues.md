@@ -48,9 +48,10 @@ without changing behavior and rerun the mandatory `flake8 .` command.
 
 ## I-003: Model construction requires accelerate
 
-- Status: Open
-- Severity: Blocking SDK behavior experiments
+- Status: Open; explicit-CPU workaround confirmed
+- Severity: Blocks observed automatic/default loading, not CPU experiments
 - Observed: [Waypoint 006](../learning/waypoints/006-2026-11-10-first-sdk-probe.md)
+- Workaround: [Waypoint 007](../learning/waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md)
 
 ### Evidence
 
@@ -66,12 +67,36 @@ The root environment uses Transformers `5.20.2` and PyTorch `2.14.1`. The
 supplied SDK lock records Transformers `5.0.0` and PyTorch `2.10.0`. Neither
 dependency set includes `accelerate`.
 
-### Impact
+### Updated impact
 
-The model instance was not created. Encoding, decoding, tokenizer-path, and
-logits observations were not reached.
+Default construction did not create a model. Explicit
+`Small_LLM_Model(device="cpu")` successfully loaded the model and enabled
+encoding, decoding, tokenizer-file, and logits observations.
 
 ### Next action
 
-Discuss `Q-006`, choose a controlled compatibility experiment, and record the
-result in Waypoint 007 before modifying production dependencies or SDK logic.
+Resolve `Q-007` before deciding whether production should force CPU, expose a
+device option, pin supplied versions, or declare `accelerate`.
+
+## I-004: Decode return type depends on tensor dimensionality
+
+- Status: Open
+- Severity: Non-blocking SDK interface mismatch
+- Observed: [Waypoint 007](../learning/waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md)
+
+### Evidence
+
+The SDK annotation promises `str`, but the public method returned:
+
+```text
+decode(encoded)    -> list[str]
+decode(encoded[0]) -> str
+```
+
+`encode()` returns a batched two-dimensional tensor. Passing the first row
+gives the one-dimensional token sequence expected for a single decoded string.
+
+### Next action
+
+Use a one-dimensional sequence in project code. Later decide whether to repair
+the copied SDK's annotation/behavior or document the required call shape.

@@ -1,10 +1,10 @@
 # Project Status
 
-Last reviewed: 2026-11-10
+Last reviewed: 2026-11-12
 
 ## Current objective
 
-Choose and run a controlled follow-up to the first model-construction failure before defining the application architecture.
+Review the successful explicit-CPU SDK evidence and understand prompt context before defining application architecture.
 
 ## Completed
 
@@ -32,25 +32,26 @@ Choose and run a controlled follow-up to the first model-construction failure be
 - Recorded the repair and storage model in waypoint 005.
 - Added and validated a reusable public-interface SDK probe.
 - Reproduced and documented the first model-construction failure.
+- Loaded Qwen successfully with explicit CPU selection.
+- Observed real encode/decode behavior, tokenizer files, and next-token logits.
+- Resolved the initial tokenizer-file and decode-shape questions.
 
 ## In progress
 
-- Discuss the waypoint 006 evidence and choose the next controlled experiment.
+- Discuss the waypoint 007 evidence in voice mode.
 
 ## Next
 
-1. Discuss whether to test explicit CPU, supplied dependency versions, or
-   `accelerate` first.
-2. Run only the selected controlled experiment.
-3. If construction succeeds, continue encode/decode, tokenizer, and logits
-   observations.
-4. Record the result in waypoint 007.
-5. Define component boundaries only after SDK behavior is understood.
+1. Explain the encode tensor, decode return values, and logits vector.
+2. Explain why a bare prompt produced natural-language continuation tokens.
+3. Decide what function definitions and output context a prompt must contain.
+4. Record the prompt-design discussion before running another model probe.
+5. Define component boundaries after the prompt responsibility is understood.
 
 ## Blockers
 
-- Issue `I-003`: default model construction stops at the Transformers
-  device-map check because `accelerate` is unavailable.
+- No blocker for explicit-CPU learning experiments.
+- Default/automatic device loading remains open as issue `I-003`.
 
 ## Active references
 

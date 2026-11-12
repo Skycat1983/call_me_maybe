@@ -13,7 +13,8 @@ export UV_LINK_MODE
 # An already activated environment must not override this project's location.
 unexport VIRTUAL_ENV
 
-.PHONY: install run debug clean lint lint-strict test inspect-sdk
+.PHONY: install run debug clean lint lint-strict test inspect-sdk \
+	inspect-sdk-cpu
 
 install:
 	uv sync
@@ -45,3 +46,6 @@ test:
 
 inspect-sdk:
 	uv run python experiments/inspect_sdk.py
+
+inspect-sdk-cpu:
+	uv run python experiments/inspect_sdk.py --device cpu

@@ -9,6 +9,8 @@ Environment update: [Waypoint 005](../learning/waypoints/005-2026-11-10-environm
 
 First runtime probe: [Waypoint 006](../learning/waypoints/006-2026-11-10-first-sdk-probe.md)
 
+Explicit-CPU probe: [Waypoint 007](../learning/waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md)
+
 ## What the SDK is
 
 The supplied SDK wraps a Hugging Face causal language model in
@@ -54,6 +56,11 @@ The first default-constructor probe failed before model weights loaded because
 the observed Transformers device-map path required `accelerate`. The supplied
 SDK does not declare that package. A compatibility strategy has not yet been
 chosen; see Waypoint 006 and issue `I-003`.
+
+Passing the public constructor argument `device="cpu"` succeeded without
+`accelerate`. The model loaded in 18.419 seconds and one logits call completed
+in 0.301 seconds. This is the confirmed path for current learning experiments;
+default/GPU policy remains open.
 
 ## Construction
 
@@ -115,17 +122,23 @@ decode(ids: torch.Tensor | list[int]) -> str
 Converts token IDs back to text and removes special tokens. Tensor input is
 converted to a Python list first.
 
-There is an interface question to test: `encode()` returns a two-dimensional
-tensor, while the underlying tokenizer normally decodes a one-dimensional
-sequence. The likely round-trip form is:
+`encode()` returns a two-dimensional batched tensor, while a single decoded
+string requires a one-dimensional token sequence:
 
 ```python
 encoded = model.encode("hello")
 text = model.decode(encoded[0])
 ```
 
-This should be confirmed with a small experiment after dependencies and model
-files are available.
+Waypoint 007 confirmed the distinction:
+
+```text
+decode(encoded)    -> list[str]
+decode(encoded[0]) -> str
+```
+
+For a single string, pass the one-dimensional sequence. The SDK annotation
+does not describe the batched return value accurately; see issue `I-004`.
 
 ### `get_logits_from_input_ids(input_ids)`
 

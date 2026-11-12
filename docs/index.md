@@ -45,9 +45,9 @@ These documents describe the work as it stands now.
   rest of the project.
 - [Waypoint talking points](learning/talking-points/index.md): voice-mode
   discussion guides for every completed waypoint.
-- [Latest waypoint](learning/waypoints/006-2026-11-10-first-sdk-probe.md):
-  first model-construction probe, observed failure, evidence, and controlled
-  follow-up options.
+- [Latest waypoint](learning/waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md):
+  successful explicit-CPU model loading and observed encode/decode,
+  tokenizer-file, and logits behavior.
 
 ### Reference
 
