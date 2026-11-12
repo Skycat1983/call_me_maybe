@@ -43,6 +43,7 @@ Unless a waypoint says otherwise, the agent should:
 | 005 | [Environment repair and cache placement](005-environment-and-cache-placement.md) | Installed environments, package caches, model caches, and reproducibility |
 | 006 | [First SDK probe](006-first-sdk-probe.md) | Constructor failure, dependency versions, device mapping, and experiment choice |
 | 007 | [Explicit-CPU SDK probe](007-explicit-cpu-sdk-probe.md) | Successful model loading, token tensors, decode behavior, tokenizer files, and logits |
+| 008 | [Editor navigation and environment storage](008-editor-navigation-and-environment-storage.md) | Interpreter selection, `/tmp` storage, symbolic links, Pylance, type discovery, and Go to Definition |
 
 ## Thematic agent briefings
 

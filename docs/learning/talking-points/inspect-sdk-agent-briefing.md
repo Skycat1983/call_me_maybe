@@ -267,6 +267,27 @@ sequence from the batch. Calling `.tolist()` converts that one-dimensional
 tensor to the ordinary Python `list[int]` expected by
 `get_logits_from_input_ids()`.
 
+The learner is not expected to guess or memorize that `.tolist()` exists.
+There are several discoverable sources of that information:
+
+- `Small_LLM_Model.encode()` declares its return type as `torch.Tensor`;
+- hovering over `encoded` lets Pylance use that annotation to show the type;
+- typing `encoded.` lets IntelliSense suggest tensor members;
+- Ctrl+click or F12 can navigate into available type/source information;
+- Python can display `help(torch.Tensor.tolist)` at runtime;
+- PyTorch's installed `_tensor_docs.py` documents the method.
+
+The installed method describes itself as converting a tensor to a nested
+Python list, or a Python number for a scalar. In this probe, `encoded[0]` is
+one-dimensional, so `.tolist()` produces a flat `list[int]` of token IDs.
+
+The shape is printed as `tuple(encoded.shape)` only for concise output.
+`encoded.shape` is already an iterable `torch.Size` object and would contain
+the same dimensions, but it displays as `torch.Size([1, 11])`. Converting it
+to a tuple displays `(1, 11)`, making the batch and sequence dimensions easier
+to read and less tied to PyTorch. The conversion is not required for model
+operation.
+
 The program prints the prompt, tensor shape, dtype, device, token count, and
 IDs so none of those properties need to be guessed.
 
@@ -549,6 +570,20 @@ limits input to the constructor's CPU, CUDA, and MPS values; and `help`
 explains the option in the generated help screen. Omitting a default
 intentionally produces `None`, preserving automatic selection when the option
 is not used.
+
+### How should I know that a tensor has `.tolist()`?
+
+You are not supposed to know every library method in advance. Start from the
+return annotation: `encode()` says it returns `torch.Tensor`. Hover over the
+variable, type `encoded.`, use Ctrl+click/F12, inspect the library help, or
+consult its documentation. Those tools reveal `.tolist()` and explain that it
+converts tensor values into ordinary Python lists.
+
+### Why convert `encoded.shape` to a tuple?
+
+Only to make the diagnostic output read `(1, 11)` instead of
+`torch.Size([1, 11])`. Both carry the same dimensions; the tuple is a simpler
+display value and is not required by the model.
 
 ### What exactly does Make do here?
 

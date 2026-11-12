@@ -3,7 +3,10 @@
 - Status: Learning reference
 - Source: `llm_sdk/llm_sdk/__init__.py`
 
-Learning context: [Waypoint 004](../learning/waypoints/004-2026-11-10-supplied-data-and-llm-sdk.md)
+Learning contexts:
+
+- [Waypoint 004](../learning/waypoints/004-2026-11-10-supplied-data-and-llm-sdk.md)
+- [Waypoint 008](../learning/waypoints/008-2026-11-12-editor-navigation-and-environment-storage.md)
 
 ## Imports used by the SDK
 
@@ -132,3 +135,21 @@ information. If it cannot resolve an import, first verify:
 2. That `make install` or an equivalent configured `uv sync` completed.
 3. That the package appears in `uv pip list`.
 4. That an import-only command succeeds.
+
+For this workspace, `.venv` is a symbolic link to the same `/tmp` environment.
+This lets tools discover the conventional path without storing packages on the
+small home filesystem:
+
+```text
+.venv -> /tmp/call-me-maybe-venv
+```
+
+Workspace settings also add `${workspaceFolder}/llm_sdk` to Pylance's analysis
+paths. Consequently, navigation for `Small_LLM_Model` can open the supplied
+source in this repository instead of only the installed copy.
+
+Pylance also uses return annotations. Because `encode()` declares
+`-> torch.Tensor`, hovering over its result or typing `encoded.` can reveal
+tensor methods such as `.tolist()`. The learner does not need to know library
+methods before using editor completion, hover information, F12, runtime
+`help()`, or library documentation to discover them.

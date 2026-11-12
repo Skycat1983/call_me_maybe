@@ -4,7 +4,9 @@ Last reviewed: 2026-11-12
 
 ## Current objective
 
-Review the successful explicit-CPU SDK evidence and understand prompt context before defining application architecture.
+Understand editor source navigation and type discovery without placing large
+Python environments on the small profile filesystem. Then return to prompt
+context before defining application architecture.
 
 ## Completed
 
@@ -35,18 +37,25 @@ Review the successful explicit-CPU SDK evidence and understand prompt context be
 - Loaded Qwen successfully with explicit CPU selection.
 - Observed real encode/decode behavior, tokenizer files, and next-token logits.
 - Resolved the initial tokenizer-file and decode-shape questions.
+- Removed a newly recreated 1.1 GB local `.venv`, restoring home usage from
+  99% to 77%.
+- Linked the conventional `.venv` path to the real `/tmp` environment.
+- Added project-level uv cache settings and VS Code workspace configuration.
+- Verified definition-source paths and documented API discovery through type
+  annotations, hover information, completion, and Go to Definition.
 
 ## In progress
 
-- Discuss the waypoint 007 evidence in voice mode.
+- Discuss waypoint 008 in voice mode and test definition navigation after a
+  VS Code window reload.
 
 ## Next
 
-1. Explain the encode tensor, decode return values, and logits vector.
-2. Explain why a bare prompt produced natural-language continuation tokens.
-3. Decide what function definitions and output context a prompt must contain.
-4. Record the prompt-design discussion before running another model probe.
-5. Define component boundaries after the prompt responsibility is understood.
+1. Reload VS Code so the workspace settings are applied.
+2. Test Ctrl+click or F12 on `Small_LLM_Model` and `ArgumentParser`.
+3. Use hover and completion to inspect `encoded` and `.tolist()`.
+4. Discuss the storage and navigation model using talking points 008.
+5. Return to function-definition and output context for the next prompt probe.
 
 ## Blockers
 

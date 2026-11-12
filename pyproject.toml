@@ -17,5 +17,9 @@ dev = [
     "pytest>=8.0",
 ]
 
+[tool.uv]
+cache-dir = "/tmp/call-me-maybe-uv-cache"
+link-mode = "copy"
+
 [tool.uv.sources]
 llm-sdk = { path = "llm_sdk" }

@@ -84,7 +84,8 @@ class Small_LLM_Model:
             p.requires_grad = False
 
 
-    # turn text into number. logits tell us which 
+    #? this is returning torch.Tensor, but what torch and what is Tensor?
+    # ? what is the target device?
     def encode(self, text: str) -> torch.Tensor:
         """Tokenise *text* and return a 2-D ``input_ids`` tensor on the target device."""
         ids = self._tokenizer.encode(text, add_special_tokens=False)

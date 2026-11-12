@@ -100,3 +100,27 @@ gives the one-dimensional token sequence expected for a single decoded string.
 
 Use a one-dimensional sequence in project code. Later decide whether to repair
 the copied SDK's annotation/behavior or document the required call shape.
+
+## I-005: Editor workflow recreated a local project environment
+
+- Status: Resolved
+- Severity: Was blocking due to profile storage exhaustion
+- Observed and resolved: [Waypoint 008](../learning/waypoints/008-2026-11-12-editor-navigation-and-environment-storage.md)
+
+### Evidence
+
+A newly created repository `.venv` used 1.1 GB and reduced the 4.7 GB home
+filesystem to 60 MB free. Its `pyvenv.cfg` identified uv 0.12.5 as its creator.
+The complete environment still existed under `/tmp`.
+
+The timing followed VS Code interpreter configuration, but does not prove that
+interpreter selection itself created the environment. An environment action or
+uv command outside Make would not inherit Makefile-only path variables.
+
+### Resolution
+
+The incomplete duplicate was removed. `.venv` is now an ignored symbolic link
+to `/tmp/call-me-maybe-venv`; project-level uv settings keep its cache under
+`/tmp`; and VS Code workspace settings select the linked interpreter, expose
+the local SDK source, and pass the storage variables to editor processes and
+new integrated terminals.

@@ -28,8 +28,9 @@ pages should link back to a waypoint when historical context matters.
 | [005](waypoints/005-2026-11-10-environment-repair-and-cache-placement.md) | 2026-11-10 | Environment and cache placement | Complete environment moved to `/tmp`; SDK imports verified and home space restored. |
 | [006](waypoints/006-2026-11-10-first-sdk-probe.md) | 2026-11-10 | First SDK runtime probe | Default model construction reproduced an `accelerate`/device-map failure before inference. |
 | [007](waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md) | 2026-11-12 | Explicit-CPU SDK probe | Model loaded; encode/decode, tokenizer files, and one logits vector were observed. |
+| [008](waypoints/008-2026-11-12-editor-navigation-and-environment-storage.md) | 2026-11-12 | Editor navigation and environment storage | Accidental local environment removed; VS Code navigation retained through a `/tmp`-backed `.venv` link and workspace settings. |
 
-The next waypoint ID is **008**.
+The next waypoint ID is **009**.
 
 ## Current registers
 

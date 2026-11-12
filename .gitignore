@@ -2,7 +2,7 @@ call_me_maybe.pdf
 *.zip
 .agents/
 .codex/
-.venv/
+.venv
 .mypy_cache/
 .pytest_cache/
 .ruff_cache/

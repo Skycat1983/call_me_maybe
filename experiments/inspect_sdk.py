@@ -66,8 +66,10 @@ def main() -> None:
 
     print_heading("Encoding")
     encoded = model.encode(PROMPT)
+    # ? how am i supposed to know there is a tolist method here?
     input_ids = encoded[0].tolist()
     print(f"prompt: {PROMPT!r}")
+    # ? why do we have to convert this to a tuple?
     print(f"tensor shape: {tuple(encoded.shape)}")
     print(f"tensor dtype: {encoded.dtype}")
     print(f"tensor device: {encoded.device}")
