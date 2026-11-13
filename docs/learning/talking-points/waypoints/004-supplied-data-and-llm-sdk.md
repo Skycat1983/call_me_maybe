@@ -165,6 +165,147 @@ Contrast it with a prefix that cannot be completed under the required schema.
 - [`Q-005`](../../../project/questions.md#q-005-how-should-a-per-prompt-generation-failure-be-represented):
   how should generation failure be represented?
 
+## Voice-session review — 2026-11-13
+
+This follow-up captures concepts the learner paused on and wants to revisit
+in a later voice session. It supplements the original waypoint rather than
+claiming that the application or decoder has been implemented.
+
+### 1. Tensor, tensor shape, dtype, and device
+
+A PyTorch tensor is a numerical array that can have zero, one, two, or more
+dimensions. A two-dimensional tensor resembles a matrix, but *tensor* is the
+broader term. Unlike an ordinary Python list, it supports optimized numerical
+computation and records its dtype and device.
+
+The explicit-CPU SDK probe encoded the prompt
+`What is the sum of 2 and 3?` as:
+
+```text
+tensor shape:  (1, 11)
+tensor dtype:  torch.int64
+tensor device: cpu
+token count:   11
+token IDs:     [3838, 374, 279, 2629, 315, 220, 17, 323, 220, 18, 30]
+```
+
+Read `(1, 11)` as **one sequence containing eleven token IDs**. The
+leading `1` is the batch dimension, not an additional token. `int64`
+is the integer storage dtype of token IDs; `cpu` is the location where
+this tensor is held. Encoding converts text to IDs; this alone is not
+semantic interpretation of the question.
+
+### 2. Decoding a whole batch versus one sequence
+
+The observed results in
+[Waypoint 007](../../waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md)
+are:
+
+```python
+model.decode(encoded)     # ['What is the sum of 2 and 3?']
+model.decode(encoded[0])  # 'What is the sum of 2 and 3?'
+```
+
+`encoded` is two-dimensional, while `encoded[0]` selects its first
+one-dimensional sequence. The SDK annotation `-> str` does not capture
+the batched `list[str]` return; see `I-004`.
+
+### 3. What the next-token logits actually score
+
+**Revisit this wording:** We feed the **whole question** as a sequence
+of eleven input tokens. The model uses that entire context to score
+**each possible single next token after the question**. It does **not**
+produce one output token or one set of logits per individual input token
+in the terminal report.
+
+The observed output contained **151,936 logits**, one per vocabulary
+token ID. The probe shows only the ten highest-scoring candidate tokens,
+not 151,936 numbers. Its first candidates were `' What'`, `' To'`,
+and `' Also'`. These are *possible continuations following the entire
+input*, not matches against individual words in the input.
+
+A higher logit is a stronger raw model preference, **not a probability**.
+The displayed ordering is a ranking. The probe did not yet select and
+append a generated token.
+
+### 4. Constrained decoding: valid prefixes, not keyword matching
+
+The constrained decoder checks whether appending the *entire candidate
+token text* leaves a prefix that can still be completed into a JSON
+object satisfying the permitted function schema. A valid prefix need not
+yet be complete JSON.
+
+For example, after `{"name":"fn_`, a token continuing an allowed
+function name could be eligible; a token leading irreversibly to a
+nonexistent name must be rejected. A token may contain several
+characters and cross more than one grammar boundary, so checking only
+its first character is insufficient. These token fragments are
+**illustrative**, not measured Qwen token boundaries.
+
+A JSON-aware parser or state machine is a plausible implementation
+approach to investigate, not a completed or selected design. Regex may
+help with restricted values but is not by itself a complete nested JSON
+and schema validator. The LLM still ranks semantic candidates; the
+decoder constrains format and allowed names/types; a final validator
+checks the complete result. These constraints do not guarantee that the
+chosen function or argument values are semantically correct.
+
+### 5. The iterative feedback loop
+
+**Core recall phrase: Predict → Filter → Select → Append → Predict again.**
+
+```text
+whole prompt + all previously selected token IDs
+    → get next-token logits across the vocabulary
+    → mask candidates that cannot preserve a valid JSON/schema prefix
+    → select an allowed token using the remaining model scores
+    → append its ID to the input sequence
+    → request fresh logits using the longer context
+    → repeat until the output is complete
+```
+
+If the first permitted output is `{`, a token representing it can be
+selected even if ordinary words originally scored higher. Once appended,
+the next model call sees that bracket in its context. JSON-like
+continuations, such as a quoted property name, may consequently receive
+higher scores. **The decoder does not reuse the old logits for all
+subsequent positions.** Prompt construction can also make JSON
+continuations more plausible from the outset.
+
+The SDK probe observed **one** next-token scoring step; this repeated
+generation-and-masking loop remains a conceptual walkthrough, not a
+feature already implemented or tested in the project.
+
+### Targeted recall questions for the next voice session
+
+1. How does a tensor differ from a normal list, and what does `(1, 11)`
+   mean?
+2. What do `torch.int64` and `cpu` tell us about the encoded result?
+3. Why does `decode(encoded)` give a list but `decode(encoded[0])` a
+   string?
+4. Does each of the eleven input tokens get one of the 151,936 reported
+   logits, or what do those logits actually represent?
+5. Is the top-ranked token already generated? Why is a logit not a
+   probability?
+6. What is the difference between an incomplete *valid prefix* and a
+   prefix that cannot be completed into the required JSON?
+7. Why must candidate validation inspect the whole token?
+8. Explain the **predict → filter → select → append → predict again**
+   loop, including why appending `{` may change the model's next
+   preferences.
+9. Which responsibilities belong to the model, the constrained decoder,
+   and the final validator?
+
+### Session status
+
+- Encoding, decode-shape differences, and next-token ranking were
+  explained and understood during the discussion.
+- Tensors/dtypes, the input-versus-next-token relationship, and the
+  iterative generation loop were explicitly marked for later recall.
+- The conceptual constrained-decoding discussion is sufficient for now;
+  no application implementation, production device-policy decision, or
+  semantic-function-selection benchmark was performed.
+
 ## Successful session outcome
 
 The learner can explain the full one-token generation loop, distinguish
