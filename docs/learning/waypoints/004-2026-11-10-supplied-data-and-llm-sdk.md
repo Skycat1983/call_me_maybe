@@ -311,6 +311,44 @@ lines and extra blank lines. This is issue `I-002`.
 The original combined learning plan and annotations were preserved as
 `docs/archive/learning-plan-and-questions-draft.md`.
 
+## Follow-up voice discussion — 2026-11-13
+
+This dated addendum preserves the original 2026-11-10 record while linking
+the discussion to later verified experiments and review priorities.
+
+- The learner revisited the explicit-CPU probe's encoding output:
+  `(1, 11)` is one batched sequence of eleven token IDs; `torch.int64`
+  specifies their integer dtype; `cpu` specifies their device.
+  A tensor is a general multidimensional numerical structure, not
+  specifically the name for a two-dimensional array.
+- The later [Waypoint 007](007-2026-11-12-explicit-cpu-sdk-probe.md)
+  established that `decode(encoded)` returns `list[str]` and
+  `decode(encoded[0])` returns `str`, resolving the historical
+  `Q-001` uncertainty above.
+- The crucial distinction was clarified: all eleven input IDs represent
+  the **whole question**; the 151,936 logits rank candidates for the
+  **one next token after that entire question**, not one score per
+  input token. The top ten shown in the terminal are candidate
+  continuations, not already-generated text.
+- The constrained-decoding discussion introduced valid but unfinished
+  JSON prefixes, checking the entire text of each candidate token,
+  and a JSON-aware state-machine/parser as an approach worth exploring,
+  not a selected implementation.
+- The most useful recall phrase was **predict → filter → select →
+  append → predict again**. Appending a selected token changes the
+  model's context and therefore the scores from the next call.
+- For later review: tensor/shape/dtype/device, batched decoding,
+  the relationship between input tokens and next-token scores,
+  and the iterative context-update mechanism.
+
+Full learner-facing explanations, examples, and recall questions:
+[Talking Points 004 — Voice-session review](../talking-points/waypoints/004-supplied-data-and-llm-sdk.md#voice-session-review--2026-11-13).
+
+No generation loop, constrained decoder, or semantic-selection evaluation
+was implemented during this discussion. The original import failure and
+open-question entries above describe **historical** Waypoint 004 status;
+later status is documented in Waypoints 005–007 and the project registers.
+
 ## Next step
 
 Review these explanations, fully synchronize the environment, and then run
