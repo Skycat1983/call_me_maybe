@@ -85,6 +85,35 @@ tensor computation.
 - Default automatic device loading remains a known issue; the explicit CPU
   route is available for learning experiments.
 
+## Voice review: input tokens, logits, and constrained decoding (2026-11-13)
+
+The [Talking Points 004 voice-session review](../../waypoints/004-supplied-data-and-llm-sdk.md#voice-session-review--2026-11-13)
+captures questions the learner paused on, answers grounded in the
+explicit-CPU experiment, and targeted recall prompts.
+
+Key distinctions for future discussions:
+
+- A tensor can have any number of dimensions. The observed `(1, 11)`
+  tensor holds one sequence of eleven token IDs; `torch.int64` is the
+  IDs' dtype, and `cpu` is their device.
+- Decoding the complete batched tensor returned `list[str]`, while
+  decoding `encoded[0]` returned `str`.
+- Eleven input tokens encode the **entire question**. The 151,936
+  logits are **alternative candidates for the single next token after
+  that entire question**, not a one-to-one mapping onto input tokens.
+- The model ranks candidates; a constrained decoder would disallow
+  tokens that prevent completion of valid JSON under the schema.
+  Check each candidate's *entire* decoded content, including
+  multi-character tokens.
+- **Predict → Filter → Select → Append → Predict again:** the selected
+  token changes the context for the next call, so the model generates
+  fresh next-token scores at every step.
+
+These points explain the intended generation loop. They **do not** imply
+that the existing `inspect_sdk.py` probe implements constrained decoding.
+For the next voice session, ask the learner to restate the input/output
+relationship and the generation cycle before reviewing the SDK boundary.
+
 ## Important boundary
 
 The supplied SDK can be studied internally for learning, but application code
