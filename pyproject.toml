@@ -1,15 +1,25 @@
+# This file was authored locally from the project requirements and supplied
+# SDK metadata. uv reads it as the desired project and dependency declaration;
+# `uv sync` or `uv lock` generates uv.lock from it. Do not hand-author the
+# resolved transitive package graph in uv.lock.
 [project]
+# These are conventional metadata values for the initial local project.
 name = "call-me-maybe"
 version = "0.1.0"
 description = "Constrained function calling with a small language model"
 readme = "README.md"
+# The project subject requires Python 3.10 or later.
 requires-python = ">=3.10"
 dependencies = [
+    # The subject requires use of the supplied SDK, NumPy, and Pydantic.
+    # The source table below tells uv that llm-sdk is the local package.
     "llm-sdk",
     "numpy>=1.26",
     "pydantic>=2.0",
 ]
 
+# These tools support required quality checks and local tests, but the running
+# application does not import them, so they belong in a development group.
 [dependency-groups]
 dev = [
     "flake8>=7.0",
@@ -18,8 +28,11 @@ dev = [
 ]
 
 [tool.uv]
+# These choices keep uv's re-downloadable data off the small home filesystem.
 cache-dir = "/tmp/call-me-maybe-uv-cache"
 link-mode = "copy"
 
 [tool.uv.sources]
+# Resolve the declared llm-sdk dependency from the supplied directory rather
+# than looking for a different package on the public package index.
 llm-sdk = { path = "llm_sdk" }

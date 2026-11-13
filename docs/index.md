@@ -43,11 +43,15 @@ These documents describe the work as it stands now.
   recording rules, and links to thematic knowledge.
 - [Learning roadmap](learning/roadmap.md): the explain-first sequence for the
   rest of the project.
-- [Waypoint talking points](learning/talking-points/index.md): voice-mode
-  discussion guides for every completed waypoint.
-- [Latest waypoint](learning/waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md):
-  successful explicit-CPU model loading and observed encode/decode,
-  tokenizer-file, and logits behavior.
+- [Talking-points hub](learning/talking-points/index.md): chronological
+  voice-mode discussions and living topic-centered learning routes.
+- [Python project tooling](learning/talking-points/themes/python-tooling/index.md):
+  dependencies, uv, locks, Make, storage, imports, and editor navigation.
+- [LLM SDK and `inspect_sdk`](learning/talking-points/themes/llm-sdk/index.md):
+  probe source, runtime evidence, model construction, tokens, and logits.
+- [Latest waypoint](learning/waypoints/010-2026-11-13-talking-points-architecture.md):
+  chronological and thematic talking-point paths, navigation, templates, and
+  maintenance rules.
 
 ### Reference
 
@@ -101,3 +105,6 @@ Create a document when:
 6. Record learning and progress in numbered waypoint logs, not command-by-command activity.
 7. Preserve source-derived documents in `archive/`; update working documents instead.
 8. Use lowercase, hyphenated filenames.
+9. Follow the root [`AGENTS.md`](../AGENTS.md) and the
+   [talking-points maintenance guide](learning/talking-points/maintenance.md)
+   when extending the learning system.

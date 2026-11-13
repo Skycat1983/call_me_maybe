@@ -4,7 +4,7 @@
 - Stage: Concept and interface study
 - Status: In progress
 
-Voice discussion: [Talking points 004](../talking-points/004-supplied-data-and-llm-sdk.md)
+Voice discussion: [Talking points 004](../talking-points/waypoints/004-supplied-data-and-llm-sdk.md)
 
 ## Purpose
 

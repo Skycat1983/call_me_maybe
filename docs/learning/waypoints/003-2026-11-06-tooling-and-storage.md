@@ -4,7 +4,7 @@
 - Stage: Development environment
 - Status: Complete, with one later-discovered environment issue
 
-Voice discussion: [Talking points 003](../talking-points/003-tooling-and-storage.md)
+Voice discussion: [Talking points 003](../talking-points/waypoints/003-tooling-and-storage.md)
 
 ## Purpose
 

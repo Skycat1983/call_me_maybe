@@ -1,7 +1,7 @@
 # Talking Points 005: Environment Repair and Cache Placement
 
 Companion waypoint:
-[005 — Environment repair and cache placement](../waypoints/005-2026-11-10-environment-repair-and-cache-placement.md)
+[005 — Environment repair and cache placement](../../waypoints/005-2026-11-10-environment-repair-and-cache-placement.md)
 
 ## Agent preparation
 

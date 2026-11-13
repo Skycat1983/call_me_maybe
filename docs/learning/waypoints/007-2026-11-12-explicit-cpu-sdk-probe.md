@@ -4,7 +4,7 @@
 - Stage: SDK runtime experiment
 - Status: Complete
 
-Voice discussion: [Talking points 007](../talking-points/007-explicit-cpu-sdk-probe.md)
+Voice discussion: [Talking points 007](../talking-points/waypoints/007-explicit-cpu-sdk-probe.md)
 
 ## Purpose
 

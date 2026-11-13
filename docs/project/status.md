@@ -1,12 +1,12 @@
 # Project Status
 
-Last reviewed: 2026-11-12
+Last reviewed: 2026-11-13
 
 ## Current objective
 
-Understand editor source navigation and type discovery without placing large
-Python environments on the small profile filesystem. Then return to prompt
-context before defining application architecture.
+Use the substantive theme routes to discuss project configuration, the SDK
+probe, and source-code flow. Then return to prompt and function-definition
+context for the next focused experiment.
 
 ## Completed
 
@@ -43,19 +43,40 @@ context before defining application architecture.
 - Added project-level uv cache settings and VS Code workspace configuration.
 - Verified definition-source paths and documented API discovery through type
   annotations, hover information, completion, and Go to Definition.
+- Traced every root dependency category to the subject, supplied SDK, or a
+  documented development choice.
+- Documented how uv generated the 102-package lock and how `uv sync` uses it.
+- Answered the learner's marked Makefile and SDK-probe questions inline.
+- Added a living full-flow SDK-probe guide covering control flow, class
+  internals, variable values and shapes, ownership, and call boundaries.
+- Established separate chronological and thematic talking-points paths.
+- Added talking-points indexes, maintenance rules, and reusable templates.
+- Added a root `AGENTS.md` so future agents follow the same learning-first and
+  documentation-maintenance conventions.
+- Recorded the architecture decision and migration phases in waypoint 010.
+- Moved chronological companions 001–009 into their dedicated directory.
+- Moved the living SDK guides into an LLM-SDK theme, split them into focused
+  documents, and added direct reading routes by goal and depth.
+- Added a Python-tooling theme connecting configuration, uv, Make, storage,
+  imports, and editor navigation.
+- Removed the unnecessary architecture discussion companion so voice sessions
+  stay focused on project substance.
 
 ## In progress
 
-- Discuss waypoint 008 in voice mode and test definition navigation after a
-  VS Code window reload.
+- Choose a substantive discussion route: Python tooling and configuration, or
+  the LLM SDK and `inspect_sdk.py` code flow.
 
 ## Next
 
-1. Reload VS Code so the workspace settings are applied.
-2. Test Ctrl+click or F12 on `Small_LLM_Model` and `ArgumentParser`.
-3. Use hover and completion to inspect `encoded` and `.tolist()`.
-4. Discuss the storage and navigation model using talking points 008.
-5. Return to function-definition and output context for the next prompt probe.
+1. Use the [Python-tooling theme](../learning/talking-points/themes/python-tooling/index.md)
+   for dependencies, uv, locks, Make, storage, imports, or editor navigation.
+2. Use the [LLM-SDK theme](../learning/talking-points/themes/llm-sdk/index.md)
+   for probe provenance, source code, runtime results, model construction,
+   tokens, decoding, tokenizer files, logits, or variable ownership.
+3. Record questions or corrections that emerge from the discussion in the
+   appropriate living theme or project register.
+4. Return to function-definition and output context for the next prompt probe.
 
 ## Blockers
 
@@ -68,5 +89,6 @@ context before defining application architecture.
 - [Requirements overview](../requirements/overview.md)
 - [Task plan](tasks.md)
 - [Learning log](../learning/index.md)
+- [Talking-points hub](../learning/talking-points/index.md)
 - [Open questions](questions.md)
 - [Known issues](issues.md)

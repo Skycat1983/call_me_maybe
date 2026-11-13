@@ -4,7 +4,7 @@
 - Stage: Requirements analysis
 - Status: Complete
 
-Voice discussion: [Talking points 002](../talking-points/002-requirements-and-documentation.md)
+Voice discussion: [Talking points 002](../talking-points/waypoints/002-requirements-and-documentation.md)
 
 ## Purpose
 

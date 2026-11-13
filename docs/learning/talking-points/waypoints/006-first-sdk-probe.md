@@ -1,7 +1,7 @@
 # Talking Points 006: First SDK Probe
 
 Companion waypoint:
-[006 — First SDK probe](../waypoints/006-2026-11-10-first-sdk-probe.md)
+[006 — First SDK probe](../../waypoints/006-2026-11-10-first-sdk-probe.md)
 
 ## Agent preparation
 
@@ -9,8 +9,8 @@ Read:
 
 - the companion waypoint;
 - `experiments/inspect_sdk.py`;
-- [known issues](../../project/issues.md);
-- [open questions](../../project/questions.md).
+- [known issues](../../../project/issues.md);
+- [open questions](../../../project/questions.md).
 
 Interpret the failure and choose the next controlled experiment. Do not
 install `accelerate`, change SDK loading code, or redesign the application

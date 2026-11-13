@@ -11,6 +11,9 @@ First runtime probe: [Waypoint 006](../learning/waypoints/006-2026-11-10-first-s
 
 Explicit-CPU probe: [Waypoint 007](../learning/waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md)
 
+Living Make-to-model walkthrough:
+[Full `inspect_sdk` flow](../learning/talking-points/themes/llm-sdk/runtime-flow/index.md)
+
 ## What the SDK is
 
 The supplied SDK wraps a Hugging Face causal language model in

@@ -4,7 +4,7 @@
 - Stage: SDK runtime experiment
 - Status: Paused for discussion after a reproducible constructor failure
 
-Voice discussion: [Talking points 006](../talking-points/006-first-sdk-probe.md)
+Voice discussion: [Talking points 006](../talking-points/waypoints/006-first-sdk-probe.md)
 
 ## Purpose
 

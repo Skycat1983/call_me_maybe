@@ -1,12 +1,12 @@
 # Talking Points 002: Requirements and Documentation
 
 Companion waypoint:
-[002 — Requirements and documentation](../waypoints/002-2026-11-06-requirements-and-documentation.md)
+[002 — Requirements and documentation](../../waypoints/002-2026-11-06-requirements-and-documentation.md)
 
 ## Agent preparation
 
 Read the companion waypoint and
-[`docs/index.md`](../../index.md). Emphasize information architecture and the
+[`docs/index.md`](../../../index.md). Emphasize information architecture and the
 difference between assignment requirements and implementation design.
 
 ## Short recap

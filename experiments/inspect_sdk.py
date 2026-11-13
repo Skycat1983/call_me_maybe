@@ -15,15 +15,44 @@ from llm_sdk import Small_LLM_Model
 PROMPT = "What is the sum of 2 and 3?"
 TOP_CANDIDATE_COUNT = 10
 # ? was this supplied to us or did we write it??
+# Answer: We wrote both constants for this local learning probe. The prompt is
+# deliberately simple, and ten candidates give a useful but readable sample.
 
 
 def parse_device_argument() -> str | None:
-    """Return an optional public SDK device override."""
+    """Return an explicit SDK device choice, or ``None`` for automatic choice.
+
+    An override is a value supplied by this script instead of allowing the SDK
+    to select a device automatically. It is useful for controlled comparisons,
+    such as changing only automatic selection to explicit CPU operation.
+    """
     # ? what does this docstring mean here? what is the override?
+    # Answer: It means this function may return a device chosen on the command
+    # line. That explicit value overrides the SDK's automatic device selection.
+    # ? is this necessary? A requirement? A safety net? Or something else?
+    # Answer: It is not a project requirement. It is an experiment control and
+    # currently a workaround: explicit CPU avoids the failing automatic CUDA
+    # device-map path while leaving the supplied SDK implementation unchanged.
+    # ? Under what circumstances would we want to supply this?
+    # Answer: Supply it to reproduce behavior on known hardware, isolate a
+    # device-specific failure, compare performance, or force a portable CPU
+    # run.
     # ? what are device arguments? why is it useful?
+    # Answer: They are command-line values such as `--device cpu`. They let us
+    # compare hardware paths without editing the experiment's source code.
+    # ? why is it useful to compare hardware paths?
+    # Answer: CPU, CUDA, and MPS can take different loading branches, use
+    # different dtypes and dependencies, and fail differently. Comparing one
+    # controlled change helps identify which branch caused an observation.
     # ? what is __doc__?
+    # Answer: At module level, `__doc__` contains the triple-quoted description
+    # at the top of this file. argparse reuses it in the `--help` output.
     parser = ArgumentParser(description=__doc__)
     # ? why these specific arguments?
+    # Answer: `--device` names the optional setting; `choices` rejects values
+    # outside the three paths this experiment covers; and `help` explains the
+    # option in the generated help screen. With no option, argparse returns
+    # None, preserving the SDK's automatic-selection experiment.
     parser.add_argument(
         "--device",
         choices=("cpu", "cuda", "mps"),
@@ -67,9 +96,17 @@ def main() -> None:
     print_heading("Encoding")
     encoded = model.encode(PROMPT)
     # ? how am i supposed to know there is a tolist method here?
+    # Answer: You are not expected to guess it. `encode()` is annotated as
+    # returning `torch.Tensor`, so editor hover/completion, Ctrl+click, runtime
+    # `help(torch.Tensor.tolist)`, or the PyTorch docs reveal this method.
+    # Selecting row zero gives one token sequence; `tolist()` converts it into
+    # the ordinary list[int] expected by get_logits_from_input_ids().
     input_ids = encoded[0].tolist()
     print(f"prompt: {PROMPT!r}")
     # ? why do we have to convert this to a tuple?
+    # Answer: We do not have to. `encoded.shape` is a torch.Size containing the
+    # same dimensions. tuple(...) only prints the simpler form `(1, 11)` rather
+    # than `torch.Size([1, 11])` in this diagnostic report.
     print(f"tensor shape: {tuple(encoded.shape)}")
     print(f"tensor dtype: {encoded.dtype}")
     print(f"tensor device: {encoded.device}")

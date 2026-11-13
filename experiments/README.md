@@ -68,4 +68,4 @@ make inspect-sdk-cpu
 Its results are recorded in Waypoint 007.
 
 For a voice-mode discussion with full code context, use the
-[`inspect_sdk.py` agent briefing](../docs/learning/talking-points/inspect-sdk-agent-briefing.md).
+[`inspect_sdk.py` probe overview](../docs/learning/talking-points/themes/llm-sdk/probe/index.md).

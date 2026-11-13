@@ -1,75 +1,81 @@
-# Waypoint Talking Points
+# Talking Points Hub
 
-These files prepare a voice-mode discussion for each learning waypoint.
+This is the entry point for voice discussions and topic-centered learning.
+Talking points now have two complementary paths: chronological waypoints and
+living themes.
 
-## How to use them
+## Choose what you want to do
 
-Tell the agent:
+| Goal | Start here |
+|---|---|
+| Discuss recently completed work | [Waypoint discussions](waypoints/index.md) |
+| Learn or revisit a topic | [Thematic discussions](themes/index.md) |
+| Understand current project direction | [Project status](../../project/status.md) |
+| Review chronological progress | [Learning log](../index.md) |
+| Maintain or reorganize talking points | [Maintenance guide](maintenance.md) |
 
-> Read `docs/learning/talking-points/<waypoint-file>` and the linked waypoint.
-> Use the voice-session guidance in that file. Help me explain the concepts in
-> my own words before moving to implementation.
+## Current learning position
 
-The talking-points file is the conversation guide. The corresponding waypoint
-is the detailed historical record.
+- Latest chronological record: [Waypoint 010 — Talking-points architecture](../waypoints/010-2026-11-13-talking-points-architecture.md)
+- Current progress discussion: [Talking points 009 — Project configuration and lockfile](waypoints/009-project-configuration-and-lockfile.md)
+- Current tooling theme: [Python project tooling](themes/python-tooling/index.md)
+- Current code and SDK theme: [LLM SDK and `inspect_sdk`](themes/llm-sdk/index.md)
+- Current deep technical guide: [Full `inspect_sdk` flow](themes/llm-sdk/runtime-flow/index.md)
 
-## Voice-session guidance
+The structural migration is complete. Chronological companions are under
+`waypoints/`; living subject guides are under `themes/`. Waypoint 010 records
+the maintenance work but intentionally has no voice-discussion companion.
 
-Unless a waypoint says otherwise, the agent should:
+## Two documentation paths
 
-1. Read the talking-points file and its linked sources before beginning.
-2. Start with a short recap of what was accomplished.
+### Chronological waypoint discussions
+
+Use these when the question is:
+
+> What did we just do, what evidence did we gather, and what should I now be
+> able to explain?
+
+Waypoint talking points are historical companions. They should remain mostly
+stable after discussion and link to current thematic material for deeper
+explanations.
+
+### Living thematic discussions
+
+Use these when the question is:
+
+> Help me understand this subject, from an overview through theory and its
+> application in this repository.
+
+Thematic talking points are updated continuously as understanding, evidence,
+and implementation develop. Mature themes can offer overview, concepts,
+project-application, detailed-flow, and question routes.
+
+## Standard voice-session guidance
+
+Unless a guide says otherwise, the agent should:
+
+1. Read the selected talking-points file and its linked sources.
+2. Start with a short recap and state the intended depth.
 3. Ask one question at a time.
 4. Let the learner explain first, then correct or extend the explanation.
 5. Use concrete examples from this repository.
-6. Distinguish confirmed facts, current assumptions, and unresolved questions.
+6. Distinguish requirements, source facts, runtime observations,
+   interpretations, assumptions, and unresolved questions.
 7. Explain unfamiliar terms before relying on them.
-8. Avoid implementing code unless the learner explicitly changes the session
-   from discussion to implementation.
-9. End with:
-   - what the learner explained confidently;
-   - what needs another pass;
-   - unanswered questions;
-   - the next recommended waypoint.
+8. Avoid implementation unless the learner explicitly changes the session's
+   purpose.
+9. End with confident areas, material needing another pass, unanswered
+   questions, and the recommended next discussion.
 
-## Available discussions
+## Suggested instruction for an agent
 
-| Waypoint | Talking points | Theme |
-|---|---|---|
-| 001 | [Repository and source files](001-repository-and-source-files.md) | Git, remotes, ignored files, extraction, and source artifacts |
-| 002 | [Requirements and documentation](002-requirements-and-documentation.md) | Requirement extraction and human-centered documentation |
-| 003 | [Tooling and storage](003-tooling-and-storage.md) | `uv`, dependencies, lockfiles, Makefile, environments, and caches |
-| 004 | [Supplied data and LLM SDK](004-supplied-data-and-llm-sdk.md) | Data contracts, model loading, tokens, logits, imports, and constrained decoding |
-| 005 | [Environment repair and cache placement](005-environment-and-cache-placement.md) | Installed environments, package caches, model caches, and reproducibility |
-| 006 | [First SDK probe](006-first-sdk-probe.md) | Constructor failure, dependency versions, device mapping, and experiment choice |
-| 007 | [Explicit-CPU SDK probe](007-explicit-cpu-sdk-probe.md) | Successful model loading, token tensors, decode behavior, tokenizer files, and logits |
-| 008 | [Editor navigation and environment storage](008-editor-navigation-and-environment-storage.md) | Interpreter selection, `/tmp` storage, symbolic links, Pylance, type discovery, and Go to Definition |
+> Read `docs/learning/talking-points/index.md`, then follow the waypoint or
+> theme route I name. Read that guide's linked sources before beginning. Ask me
+> one question at a time and help me explain the subject in my own words.
 
-## Thematic agent briefings
+## Maintenance
 
-These longer files give a voice agent enough context to handle detailed
-follow-up questions about one subject without reconstructing several
-waypoints first.
-
-- [`inspect_sdk.py` agent briefing](inspect-sdk-agent-briefing.md): provenance,
-  command path, source walkthrough, data flow, actual experiment results,
-  limitations, likely questions, misconceptions, and discussion guidance.
-
-## File convention
-
-Each waypoint `NNN-YYYY-MM-DD-theme.md` gets a companion:
-
-```text
-docs/learning/talking-points/NNN-theme.md
-```
-
-The companion should link to the full waypoint and include:
-
-- agent preparation;
-- a short recap;
-- key concepts;
-- discussion prompts;
-- understanding checks;
-- likely misconceptions;
-- unresolved questions;
-- a successful-session outcome.
+- Repository instructions: [`AGENTS.md`](../../../AGENTS.md)
+- Editorial rules: [maintenance guide](maintenance.md)
+- Templates: [templates directory](templates/)
+- Completed architecture record: [Waypoint 010](../waypoints/010-2026-11-13-talking-points-architecture.md)

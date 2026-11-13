@@ -1,7 +1,7 @@
 # Talking Points 003: Tooling and Storage
 
 Companion waypoint:
-[003 — Tooling and storage](../waypoints/003-2026-11-06-tooling-and-storage.md)
+[003 — Tooling and storage](../../waypoints/003-2026-11-06-tooling-and-storage.md)
 
 ## Agent preparation
 
@@ -67,7 +67,7 @@ Ask the learner to classify:
 The current `.venv` contains several dependencies but not `transformers`.
 This demonstrates the distinction between a valid lockfile and a completely
 synced environment. See
-[`I-001`](../../project/issues.md#i-001-incomplete-project-environment).
+[`I-001`](../../../project/issues.md#i-001-project-environment-is-not-fully-synchronized).
 
 ## Successful session outcome
 

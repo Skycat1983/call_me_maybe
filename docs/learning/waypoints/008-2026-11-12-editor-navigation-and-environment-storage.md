@@ -5,7 +5,7 @@
 - Status: Complete
 
 Voice discussion:
-[Talking points 008](../talking-points/008-editor-navigation-and-environment-storage.md)
+[Talking points 008](../talking-points/waypoints/008-editor-navigation-and-environment-storage.md)
 
 ## Purpose
 

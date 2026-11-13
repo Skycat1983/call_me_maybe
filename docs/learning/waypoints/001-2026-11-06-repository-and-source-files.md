@@ -4,7 +4,7 @@
 - Stage: Project foundation
 - Status: Complete
 
-Voice discussion: [Talking points 001](../talking-points/001-repository-and-source-files.md)
+Voice discussion: [Talking points 001](../talking-points/waypoints/001-repository-and-source-files.md)
 
 ## Purpose
 

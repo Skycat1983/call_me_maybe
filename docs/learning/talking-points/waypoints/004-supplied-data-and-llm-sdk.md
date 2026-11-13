@@ -1,16 +1,16 @@
 # Talking Points 004: Supplied Data and LLM SDK
 
 Companion waypoint:
-[004 — Supplied data and LLM SDK](../waypoints/004-2026-11-10-supplied-data-and-llm-sdk.md)
+[004 — Supplied data and LLM SDK](../../waypoints/004-2026-11-10-supplied-data-and-llm-sdk.md)
 
 ## Agent preparation
 
 Read:
 
 - the companion waypoint;
-- [LLM SDK reference](../../reference/llm-sdk.md);
-- [Python import resolution](../../reference/imports.md);
-- [open questions](../../project/questions.md);
+- [LLM SDK reference](../../../reference/llm-sdk.md);
+- [Python import resolution](../../../reference/imports.md);
+- [open questions](../../../project/questions.md);
 - the two files under `data/input/`.
 
 This is a discussion session. Ask the learner to explain first, use small
@@ -150,17 +150,19 @@ Contrast it with a prefix that cannot be completed under the required schema.
   restriction explicit.
 - A lockfile can be correct while the current environment is incomplete.
 
-## Open questions for discussion
+## Questions raised at this waypoint
 
-- [`Q-001`](../../project/questions.md#q-001-does-sdk-decode-accept-the-direct-result-of-encode):
+- [`Q-001`](../../waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md#resolved-questions),
+  resolved in Waypoint 007:
   does `decode(encode(text))` require indexing the first batch?
-- [`Q-002`](../../project/questions.md#q-002-which-parameter-schema-types-must-be-supported):
+- [`Q-002`](../../../project/questions.md#q-002-which-parameter-schema-types-must-be-supported):
   which schema types are mandatory?
-- [`Q-003`](../../project/questions.md#q-003-which-tokenizer-files-are-available-for-qwen3):
+- [`Q-003`](../../waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md#resolved-questions),
+  resolved in Waypoint 007:
   which tokenizer files does Qwen expose?
-- [`Q-004`](../../project/questions.md#q-004-what-prompt-format-produces-reliable-semantic-function-selection):
+- [`Q-004`](../../../project/questions.md#q-004-what-prompt-format-produces-reliable-semantic-function-selection):
   how should the prompt and definitions be presented?
-- [`Q-005`](../../project/questions.md#q-005-how-should-a-per-prompt-generation-failure-be-represented):
+- [`Q-005`](../../../project/questions.md#q-005-how-should-a-per-prompt-generation-failure-be-represented):
   how should generation failure be represented?
 
 ## Successful session outcome

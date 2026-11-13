@@ -4,7 +4,7 @@
 - Stage: Development environment
 - Status: Complete
 
-Voice discussion: [Talking points 005](../talking-points/005-environment-and-cache-placement.md)
+Voice discussion: [Talking points 005](../talking-points/waypoints/005-environment-and-cache-placement.md)
 
 ## Purpose
 

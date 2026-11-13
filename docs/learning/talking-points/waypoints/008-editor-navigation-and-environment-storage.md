@@ -1,7 +1,7 @@
 # Talking Points 008: Editor Navigation and Environment Storage
 
 Companion waypoint:
-[008 — Editor navigation and environment storage](../waypoints/008-2026-11-12-editor-navigation-and-environment-storage.md)
+[008 — Editor navigation and environment storage](../../waypoints/008-2026-11-12-editor-navigation-and-environment-storage.md)
 
 ## Agent preparation
 
@@ -10,7 +10,7 @@ Read:
 - the companion waypoint;
 - `.vscode/settings.json`;
 - `pyproject.toml` and the Makefile;
-- [Python import resolution](../../reference/imports.md);
+- [Python import resolution](../../../reference/imports.md);
 - the learner's question comments in `experiments/inspect_sdk.py`.
 
 Explain concepts before suggesting commands. Do not remove learner question

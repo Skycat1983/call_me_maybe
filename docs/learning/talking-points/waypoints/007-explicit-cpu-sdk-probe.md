@@ -1,10 +1,13 @@
 # Talking Points 007: Explicit-CPU SDK Probe
 
 Companion waypoint:
-[007 — Explicit-CPU SDK probe](../waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md)
+[007 — Explicit-CPU SDK probe](../../waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md)
 
 Detailed topic briefing:
-[`inspect_sdk.py` agent briefing](inspect-sdk-agent-briefing.md)
+[`inspect_sdk.py` probe overview](../themes/llm-sdk/probe/index.md)
+
+Living execution walkthrough:
+[full `inspect_sdk` flow](../themes/llm-sdk/runtime-flow/index.md)
 
 ## Agent preparation
 
@@ -12,9 +15,9 @@ Read:
 
 - the companion waypoint;
 - `experiments/inspect_sdk.py`;
-- [LLM SDK reference](../../reference/llm-sdk.md);
-- [open questions](../../project/questions.md);
-- [known issues](../../project/issues.md).
+- [LLM SDK reference](../../../reference/llm-sdk.md);
+- [open questions](../../../project/questions.md);
+- [known issues](../../../project/issues.md).
 
 Discuss observed behavior before proposing application design. Do not begin a
 generation loop or prompt implementation during this session.

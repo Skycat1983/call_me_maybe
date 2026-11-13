@@ -1,7 +1,7 @@
 # Talking Points 001: Repository and Source Files
 
 Companion waypoint:
-[001 — Repository and source files](../waypoints/001-2026-11-06-repository-and-source-files.md)
+[001 — Repository and source files](../../waypoints/001-2026-11-06-repository-and-source-files.md)
 
 ## Agent preparation
 
@@ -27,10 +27,10 @@ contents were verified.
 
 ## Discussion prompts
 
-- Explain the journey of a file from the workspace to GitHub.
-- What is the difference between `git add`, `git commit`, and `git push`?
-- Why did the PDF remain on disk after being ignored?
-- Why was `.gitignore` added before the first `git add`?
+<!-- - Explain the journey of a file from the workspace to GitHub. -->
+<!-- - What is the difference between `git add`, `git commit`, and `git push`? -->
+<!-- - Why did the PDF remain on disk after being ignored? -->
+<!-- - Why was `.gitignore` added before the first `git add`? -->
 - Why were the extracted files preferable to committing only the ZIPs?
 - When would keeping an original archive still be justified?
 - What did setting `origin` accomplish?
@@ -40,7 +40,7 @@ contents were verified.
 
 Ask the learner to predict:
 
-- Whether `.gitignore` deletes a file.
+<!-- - Whether `.gitignore` deletes a file. -->
 - Whether an already tracked file becomes untracked merely by adding it to
   `.gitignore`.
 - Whether a commit automatically appears on GitHub.
@@ -48,8 +48,8 @@ Ask the learner to predict:
 
 ## Likely misconceptions
 
-- `.gitignore` does not delete files.
-- `.gitignore` does not retroactively remove already tracked files.
+<!-- - `.gitignore` does not delete files. -->
+<!-- - `.gitignore` does not retroactively remove already tracked files. -->
 - A commit is local until it is pushed.
 - A Git remote is a named destination, not a second local copy of the working
   directory.

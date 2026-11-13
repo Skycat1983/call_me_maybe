@@ -11,8 +11,10 @@ The documentation has two complementary layers:
    worked on, questions asked, answers reached, evidence gathered, decisions
    made, and what should happen next.
 2. **Thematic documents** hold the current reusable explanation of a subject.
-   Requirements live in `docs/requirements/`, SDK explanations in
-   `docs/reference/`, and future implementation designs in `docs/design/`.
+   Requirements live in `docs/requirements/`, canonical technical facts in
+   `docs/reference/`, living conversational guides in
+   `docs/learning/talking-points/themes/`, and future implementation designs
+   in `docs/design/`.
 
 A waypoint should link to the thematic pages it created or changed. Thematic
 pages should link back to a waypoint when historical context matters.
@@ -29,8 +31,10 @@ pages should link back to a waypoint when historical context matters.
 | [006](waypoints/006-2026-11-10-first-sdk-probe.md) | 2026-11-10 | First SDK runtime probe | Default model construction reproduced an `accelerate`/device-map failure before inference. |
 | [007](waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md) | 2026-11-12 | Explicit-CPU SDK probe | Model loaded; encode/decode, tokenizer files, and one logits vector were observed. |
 | [008](waypoints/008-2026-11-12-editor-navigation-and-environment-storage.md) | 2026-11-12 | Editor navigation and environment storage | Accidental local environment removed; VS Code navigation retained through a `/tmp`-backed `.venv` link and workspace settings. |
+| [009](waypoints/009-2026-11-13-project-configuration-and-lockfile.md) | 2026-11-13 | Project configuration and lockfile | Direct dependencies traced to requirements; uv lock generation and synchronization documented; inline learner questions answered. |
+| [010](waypoints/010-2026-11-13-talking-points-architecture.md) | 2026-11-13 | Talking-points architecture | Chronological discussions separated from living thematic learning; navigation, maintenance rules, templates, and agent instructions established. |
 
-The next waypoint ID is **009**.
+The next waypoint ID is **011**.
 
 ## Current registers
 
@@ -40,11 +44,13 @@ The next waypoint ID is **009**.
 - [Project status](../project/status.md): immediate objective and next actions.
 - [Project tasks](../project/tasks.md): implementation work by milestone.
 - [Learning roadmap](roadmap.md): the intended sequence of concepts and work.
-- [Waypoint talking points](talking-points/index.md): voice-mode discussion
-  guides paired with every waypoint.
+- [Talking-points hub](talking-points/index.md): chronological voice-mode
+  discussions and living topic-centered learning routes.
 
 ## Current thematic documents
 
+- [Python project tooling](talking-points/themes/python-tooling/index.md)
+- [LLM SDK and `inspect_sdk`](talking-points/themes/llm-sdk/index.md)
 - [Requirements overview](../requirements/overview.md)
 - [Input/output contract](../requirements/input-output-contract.md)
 - [Constrained decoding requirements](../requirements/constrained-decoding.md)
@@ -104,5 +110,9 @@ understood later without reconstructing the original conversation.
 7. Avoid duplicating full explanations across files; link to the canonical
    thematic page.
 8. Use filenames in the form `NNN-YYYY-MM-DD-short-theme.md`.
-9. Add a companion file under `talking-points/` whenever a waypoint is
-   created, and link the two files in both directions.
+9. Add a companion file under `talking-points/waypoints/` when a waypoint is
+   useful for a planned voice discussion, and link the two files in both
+   directions. A maintenance-only waypoint may omit one.
+10. Maintain living topic-centered guides under `talking-points/themes/` and
+    follow the [talking-points maintenance guide](talking-points/maintenance.md)
+    when creating, splitting, or moving them.
