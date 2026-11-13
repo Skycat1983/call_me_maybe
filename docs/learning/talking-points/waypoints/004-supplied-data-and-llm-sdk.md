@@ -155,7 +155,8 @@ Contrast it with a prefix that cannot be completed under the required schema.
 - [`Q-001`](../../waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md#resolved-questions),
   resolved in Waypoint 007:
   does `decode(encode(text))` require indexing the first batch?
-- [`Q-002`](../../../project/questions.md#q-002-which-parameter-schema-types-must-be-supported):
+- [`Q-002`](../../waypoints/011-2026-11-13-pydantic-input-models.md#q-002-resolved-supported-parameter-types),
+  resolved in Waypoint 011:
   which schema types are mandatory?
 - [`Q-003`](../../waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md#resolved-questions),
   resolved in Waypoint 007:

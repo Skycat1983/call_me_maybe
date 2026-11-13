@@ -3,18 +3,6 @@
 This register contains only unresolved questions. Answered questions remain in
 the waypoint where they were discussed.
 
-## Q-002: Which parameter schema types must be supported?
-
-- Status: Open
-- Opened: Waypoint 004
-- Theme: Input schema
-
-The demonstration definitions use only `string` and `number`. The subject also
-mentions `boolean` and says the evaluation files may change.
-
-Next step: derive the minimum mandatory type set from the subject and later
-test replacement definitions containing each supported type.
-
 ## Q-004: What prompt format produces reliable semantic function selection?
 
 - Status: Open

@@ -14,6 +14,7 @@ theory, project application, detailed flows, and question-led discussions.
 |---|---|---|
 | [LLM SDK and `inspect_sdk`](llm-sdk/index.md) | Understanding the supplied model wrapper, probe source, runtime behavior, tensors, decoding, tokenizer files, logits, and call flow | Quick summary, provenance, code walkthrough, observed results, detailed execution, variable ledger, and discussion questions |
 | [Python project tooling](python-tooling/index.md) | Understanding TOML, uv, locks, installation, Make, `/tmp` environments, caches, imports, and editor navigation | Surface model, configuration and locking, command execution, storage, imports, editor navigation, and discussion questions |
+| [Input validation and data models](input-validation/index.md) | Understanding how external JSON becomes trusted Pydantic objects before application or LLM logic | Overview, code walkthrough, tests, runtime versus static validation, current boundaries, and future loader questions |
 
 ## Planned reading routes
 
@@ -32,6 +33,8 @@ content exists, not as empty placeholders.
 
 ```text
 themes/
+├── input-validation/
+│   └── index.md
 ├── python-tooling/
 │   └── index.md
 └── llm-sdk/

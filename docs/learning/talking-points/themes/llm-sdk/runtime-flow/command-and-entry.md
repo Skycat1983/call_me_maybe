@@ -85,6 +85,7 @@ argument parser later reuses that text in `--help` output.
 | `nlargest` | function | Select the highest-scoring logit indices |
 | `Path` | class | Check returned files and sizes |
 | `perf_counter` | function | Measure elapsed duration |
+| `cast` | typing helper | Narrow the device return type for Mypy without changing its runtime value |
 | `Small_LLM_Model` | supplied class | Access tokenizer and model through public methods |
 
 Importing `Small_LLM_Model` loads and defines the SDK class. It does not yet
@@ -163,7 +164,7 @@ registers one optional rule:
 Then:
 
 ```python
-return parser.parse_args().device
+return cast(str | None, parser.parse_args().device)
 ```
 
 performs these operations:
@@ -173,6 +174,10 @@ performs these operations:
 3. create an argparse namespace object;
 4. read its `.device` attribute;
 5. return the string `"cpu"`.
+
+Mypy sees the dynamically created namespace attribute as `Any`.
+`cast(str | None, ...)` records the type established by the parser rules for
+static analysis. It performs no runtime conversion or validation.
 
 ### Variable after return
 

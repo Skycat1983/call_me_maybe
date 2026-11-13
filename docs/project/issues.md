@@ -30,21 +30,35 @@ created the relocated environment and an import-only check succeeded with
 
 The incomplete local `.venv` was removed after verification.
 
-## I-002: Supplied SDK does not currently pass Flake8
+## I-002: Supplied SDK does not pass the mandatory static checks
 
 - Status: Open
 - Severity: Non-blocking during interface study
-- Observed: Waypoint 004
+- Observed: Waypoint 004 and
+  [Waypoint 011](../learning/waypoints/011-2026-11-13-pydantic-input-models.md)
 
 ### Evidence
 
 A targeted Flake8 run reports pre-existing long lines and extra blank lines in
 `llm_sdk/llm_sdk/__init__.py`.
 
+A repository-wide Mypy run also reports three supplied-SDK typing errors:
+
+- incompatible tokenizer backend assignment;
+- an incompatible model argument at the inference-mode wrapper;
+- `decode()` promising `str` while the underlying call can return
+  `str | list[str]`.
+
+The local `inspect_sdk.py` probe initially produced a separate `Any` return
+warning for its dynamically created `argparse` attribute. Waypoint 011 repairs
+that local annotation with `typing.cast`; the three supplied-SDK findings
+remain.
+
 ### Next action
 
-Decide whether the copied SDK is in project lint scope. If it is, format it
-without changing behavior and rerun the mandatory `flake8 .` command.
+Decide whether the copied SDK is in project lint and Mypy scope. If it is,
+repair its formatting and annotations without changing behavior, then rerun
+the mandatory repository-wide commands.
 
 ## I-003: Model construction requires accelerate
 

@@ -26,6 +26,10 @@ whether the file exists and query its size.
 `perf_counter` measures elapsed construction and forward-pass time. It is
 appropriate for durations; it is not being used as a calendar clock.
 
+`cast` tells Mypy the expected static type of a value when a library API is
+too dynamic for the checker to infer it. It does not convert, validate, or
+otherwise change the value at runtime.
+
 `Small_LLM_Model` is the supplied wrapper being investigated. The experiment
 does not reach into its private fields.
 
@@ -87,6 +91,18 @@ No `type=` is required because command-line values are strings by default. No
 `None`, which is precisely what the experiment needs to retain the SDK's
 automatic-selection path. Finally, `.parse_args().device` returns the value
 stored under the name inferred from `--device`.
+
+The function returns it through:
+
+```python
+return cast(str | None, parser.parse_args().device)
+```
+
+`ArgumentParser` creates a `Namespace` whose attributes depend on calls to
+`add_argument()`. Mypy therefore sees `.device` as `Any`, even though the
+parser rules prove that this script receives a permitted string or `None`.
+`cast` records that fact for static analysis. It emits no runtime check; the
+parser's `choices` and omitted-option behavior remain the runtime controls.
 
 The function docstring says it returns an “optional public SDK device
 override.” “Optional” means the caller does not have to provide it. “Public

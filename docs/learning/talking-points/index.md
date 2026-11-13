@@ -16,8 +16,9 @@ living themes.
 
 ## Current learning position
 
-- Latest chronological record: [Waypoint 010 — Talking-points architecture](../waypoints/010-2026-11-13-talking-points-architecture.md)
-- Current progress discussion: [Talking points 009 — Project configuration and lockfile](waypoints/009-project-configuration-and-lockfile.md)
+- Latest chronological record: [Waypoint 011 — Pydantic input models](../waypoints/011-2026-11-13-pydantic-input-models.md)
+- Current progress discussion: [Talking points 011 — Pydantic input models](waypoints/011-pydantic-input-models.md)
+- Current input theme: [Input validation and data models](themes/input-validation/index.md)
 - Current tooling theme: [Python project tooling](themes/python-tooling/index.md)
 - Current code and SDK theme: [LLM SDK and `inspect_sdk`](themes/llm-sdk/index.md)
 - Current deep technical guide: [Full `inspect_sdk` flow](themes/llm-sdk/runtime-flow/index.md)

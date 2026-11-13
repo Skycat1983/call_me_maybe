@@ -20,6 +20,7 @@ work. The full chronological evidence remains in `docs/learning/waypoints/`.
 | 007 | [Explicit-CPU SDK probe](007-explicit-cpu-sdk-probe.md) | Successful loading, token tensors, decoding, tokenizer files, and logits |
 | 008 | [Editor navigation and environment storage](008-editor-navigation-and-environment-storage.md) | Interpreter selection, `/tmp` storage, Pylance, and Go to Definition |
 | 009 | [Project configuration and lockfile](009-project-configuration-and-lockfile.md) | TOML provenance, dependency categories, uv resolution, and synchronization |
+| 011 | [Pydantic input models](011-pydantic-input-models.md) | Runtime validation, nested models, supported value types, strict fields, and focused tests |
 
 Waypoint 010 is a [maintenance milestone](../../waypoints/010-2026-11-13-talking-points-architecture.md),
 not a subject selected for voice discussion.

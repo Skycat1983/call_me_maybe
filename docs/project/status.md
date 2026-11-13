@@ -4,9 +4,8 @@ Last reviewed: 2026-11-13
 
 ## Current objective
 
-Use the substantive theme routes to discuss project configuration, the SDK
-probe, and source-code flow. Then return to prompt and function-definition
-context for the next focused experiment.
+Understand the first strict Pydantic input models, then implement JSON file
+loading and clear validation errors without involving the LLM.
 
 ## Completed
 
@@ -61,27 +60,39 @@ context for the next focused experiment.
   imports, and editor navigation.
 - Removed the unnecessary architecture discussion companion so voice sessions
   stay focused on project substance.
+- Created the first production `src` package and strict Pydantic models for
+  prompt inputs, function definitions, and declared value types.
+- Resolved Q-002 with initial `string`, `number`, and `boolean` support.
+- Added 13 focused tests covering supplied examples and representative invalid
+  structures; the new production and test code passes focused pytest, Flake8,
+  Mypy, and compilation checks.
+- Repaired the local SDK probe's dynamic `argparse` return annotation without
+  changing runtime behavior.
+- Extended issue I-002 with the supplied SDK's repository-wide Mypy findings.
+- Added the living input-validation theme and Waypoint 011 discussion guide.
 
 ## In progress
 
-- Choose a substantive discussion route: Python tooling and configuration, or
-  the LLM SDK and `inspect_sdk.py` code flow.
+- Discuss Waypoint 011 and trace how raw dictionaries become nested validated
+  model instances.
 
 ## Next
 
-1. Use the [Python-tooling theme](../learning/talking-points/themes/python-tooling/index.md)
-   for dependencies, uv, locks, Make, storage, imports, or editor navigation.
-2. Use the [LLM-SDK theme](../learning/talking-points/themes/llm-sdk/index.md)
-   for probe provenance, source code, runtime results, model construction,
-   tokens, decoding, tokenizer files, logits, or variable ownership.
-3. Record questions or corrections that emerge from the discussion in the
-   appropriate living theme or project register.
-4. Return to function-definition and output context for the next prompt probe.
+1. Use the [Waypoint 011 discussion](../learning/talking-points/waypoints/011-pydantic-input-models.md)
+   for the completed implementation round.
+2. Use the [input-validation theme](../learning/talking-points/themes/input-validation/index.md)
+   for Pydantic concepts, code, tests, and current boundaries.
+3. Implement JSON loaders for prompts and function definitions.
+4. Add tests for missing files, invalid JSON, wrong top-level values, invalid
+   list items, and successful loading.
+5. Add the CLI entry point only after the loading boundary has clear errors.
 
 ## Blockers
 
 - No blocker for explicit-CPU learning experiments.
 - Default/automatic device loading remains open as issue `I-003`.
+- New application code passes focused static checks. Repository-wide Flake8
+  and Mypy remain blocked by the supplied-SDK findings in issue `I-002`.
 
 ## Active references
 

@@ -9,6 +9,7 @@ from collections.abc import Callable
 from heapq import nlargest
 from pathlib import Path
 from time import perf_counter
+from typing import cast
 
 from llm_sdk import Small_LLM_Model
 
@@ -58,7 +59,7 @@ def parse_device_argument() -> str | None:
         choices=("cpu", "cuda", "mps"),
         help="Pass an explicit device to Small_LLM_Model.",
     )
-    return parser.parse_args().device
+    return cast(str | None, parser.parse_args().device)
 
 
 def print_heading(title: str) -> None:

@@ -49,9 +49,11 @@ These documents describe the work as it stands now.
   dependencies, uv, locks, Make, storage, imports, and editor navigation.
 - [LLM SDK and `inspect_sdk`](learning/talking-points/themes/llm-sdk/index.md):
   probe source, runtime evidence, model construction, tokens, and logits.
-- [Latest waypoint](learning/waypoints/010-2026-11-13-talking-points-architecture.md):
-  chronological and thematic talking-point paths, navigation, templates, and
-  maintenance rules.
+- [Input validation and data models](learning/talking-points/themes/input-validation/index.md):
+  strict Pydantic boundaries between external JSON and application logic.
+- [Latest waypoint](learning/waypoints/011-2026-11-13-pydantic-input-models.md):
+  first production package, strict input models, supported value types, and
+  focused validation tests.
 
 ### Reference
 

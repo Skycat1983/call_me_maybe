@@ -1,6 +1,6 @@
 # Project Tasks
 
-Last reviewed: 2026-11-10
+Last reviewed: 2026-11-13
 
 Tasks are grouped by milestone. Check an item only after its result has been verified.
 
@@ -35,8 +35,8 @@ Tasks are grouped by milestone. Check an item only after its result has been ver
 
 ## M2: Input, models, and CLI
 
-- [ ] Define Pydantic models for prompts.
-- [ ] Define Pydantic models for function definitions.
+- [x] Define Pydantic models for prompts.
+- [x] Define Pydantic models for function definitions.
 - [ ] Define Pydantic models for output records.
 - [ ] Implement JSON file loading and validation.
 - [ ] Implement CLI path arguments and defaults.
