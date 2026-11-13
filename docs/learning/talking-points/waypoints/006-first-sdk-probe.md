@@ -110,6 +110,122 @@ Choose the next controlled experiment and explain:
 3. What outcome would support or reject the hypothesis.
 4. Whether it changes dependencies or only experiment configuration.
 
+## Voice-session review — 2026-11-13
+
+This is a record of the *discussion*, not a new SDK experiment. It captures
+where the learner paused, the explanations given, and what to recall unaided
+next time. The original Waypoint 006 failure and the later Waypoint 007 CPU
+success remain distinct events.
+
+### Topics actually covered
+
+1. **Purpose and limits of the first probe.** `inspect_sdk.py` was meant to
+   construct the supplied wrapper, encode a prompt, compare decoding forms,
+   locate tokenizer files, and request one next-token logit vector. In
+   Waypoint 006 the default constructor failed; none of the later checks ran.
+   Importing `llm_sdk` successfully proves less than successfully loading its
+   model.
+2. **Reading the traceback.** Python's frames identify a file path, line,
+   and function; they trace calls from a caller to the exception site. The
+   important diagnostic anchors are the application call site, the *last*
+   library frame that raised the error, and the exception's type and message.
+   Starting from the bottom is a practical way to identify the immediate
+   failure before following the call chain upwards.
+3. **Actual failure.** The captured final exception was `ValueError`, saying
+   that using a `device_map`, `tp_plan`, `torch.device` context manager, or a
+   non-default device setting required the separate `accelerate` package.
+   The documented path was `Small_LLM_Model()` →
+   `AutoModelForCausalLM.from_pretrained(...)` →
+   `check_and_set_device_map(...)` → `ValueError`. This is evidence of the
+   loading-path requirement, *not* an inference failure or a complete
+   architectural diagnosis.
+4. **Which file owns a line number.** The learner located a frame described
+   as `line 137, in check_and_set_device_map` under
+   `transformers/integrations/accelerate.py`. That is installed Transformers
+   source, *not* line 137 of `experiments/inspect_sdk.py`. A traceback's
+   filename and line number must be read together. The library file's name
+   does not mean the separately distributed `accelerate` package was installed.
+5. **Line-number discrepancy.** The learner reported an early frame at
+   `line 125` in `inspect_sdk.py`, then could not find the expected code at
+   that position. In the current `main` version reviewed on 2026-11-13, the
+   constructor call is **line 92** and **line 125 is blank**. This is a
+   concrete reason *not* to identify line 125 as the constructor in the
+   currently published script. A traceback records the code and library
+   locations for its particular run; source edits or changed environments
+   may make later line numbers differ. We have not independently retrieved
+   the exact historic terminal output or established why that particular
+   frame reported 125.
+6. **Device selection and controlled comparison.** The SDK's automatic
+   device decision can enter a different loading path from explicit
+   `device="cpu"`. The follow-up Waypoint 007 CPU experiment succeeded
+   without installing `accelerate` or rewriting the SDK. This isolates a
+   working CPU path, but does not fix default or GPU loading and does not
+   prove which device was chosen in the failed process.
+7. **Dependency drift remains a hypothesis, not a verdict.** The supplied
+   lock recorded Transformers 5.0.0 and PyTorch 2.10.0; the root lock
+   recorded Transformers 5.20.2 and PyTorch 2.14.1. Both omitted
+   `accelerate`. A newer library version *may* affect compatibility, but no
+   supplied-version comparison was performed in this discussion. The point
+   of controlled experiments is to alter one relevant variable at a time.
+
+### Learner observations and areas needing recall
+
+- The learner actively found and read the final `ValueError` and identified
+  the Transformers frame, rather than relying only on a summary.
+- The main difficulty was deciding which traceback line and source file to
+  inspect, especially after noticing multiple file paths and line numbers.
+- Progress messages such as `tokenizer.json` reconstruction were initially
+  distracting; they are not the final Python exception and do not themselves
+  establish successful model construction.
+- The CPU-workaround logic and the existence of a version mismatch were
+  discussed, but have not yet been tested via unaided explanation.
+- **Do not mark durable mastery as proven.** Begin the next discussion by
+  asking for the explanations in the learner's own words, without giving the
+  answer first.
+
+### Targeted recall questions for the next voice session
+
+Ask **one question at a time**, allowing an unaided answer before hints:
+
+1. When reading a Python traceback, which three anchors are worth finding
+   first? Where is the error *reason* usually stated?
+2. What is the difference between the first relevant frame in your script
+   and the final library frame raising the exception?
+3. Why would `line 137` in `transformers/integrations/accelerate.py` not
+   correspond to `line 137` in `inspect_sdk.py`?
+4. What did the actual `ValueError` say, and what does it tell us without
+   proving the best fix?
+5. What is the difference between `import llm_sdk` succeeding and
+   `Small_LLM_Model(...)` constructing successfully?
+6. Why did encoding, decoding, and logits not execute in the failed default
+   probe? What did the later CPU probe establish?
+7. Why is `Small_LLM_Model(device="cpu")` a useful controlled test, and what
+   does it *not* prove about default/GPU loading?
+8. Which dependency versions differed between the supplied and root locks?
+   Does that difference alone prove the cause?
+9. If the old traceback says line 125 but current code shows a different
+   line, how would you investigate without assuming the file is unchanged?
+10. What experiment could separately test the version-compatibility
+    hypothesis without casually changing production dependencies?
+
+### Status and next discussion
+
+**Covered during the call:** the first constructor failure; traceback
+navigation and file ownership; the `accelerate` message; device selection;
+the CPU comparison; lockfile drift; and the difference between an observed
+requirement and a proven root cause.
+
+**Still open:** exact reason the default run entered the failing path; the
+production device/dependency policy (`I-003`, `Q-007`); and any controlled
+supplied-version comparison. No code, dependencies, or model configuration
+were changed during this voice review.
+
+**Recommended sequence:** start the next session with the recall questions
+above, then move to [Talking Points 007](007-explicit-cpu-sdk-probe.md) to
+explain the successful tensor, decoding, tokenizer-file, and logits results.
+For more detailed implementation-level explanation use the
+[LLM-SDK theme](../themes/llm-sdk/index.md).
+
 ## Successful session outcome
 
 The learner can explain the traceback's stage, distinguish competing
