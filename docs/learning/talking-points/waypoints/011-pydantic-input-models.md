@@ -114,3 +114,20 @@ loading is the next implementation slice.
 - [Waypoint discussions](index.md)
 - [Project status](../../../project/status.md)
 - [Python project tooling](../themes/python-tooling/index.md)
+
+## Voice-session follow-up notes (2026-11-17)
+
+These are review requests from the learner, not claims that the next implementation slice is complete.
+
+### Revisit on the next learning pass
+
+- Walk through the exact sequence: JSON text -> `json.loads()` or `json.load()` -> Python dictionaries/lists -> `PromptInput.model_validate()` or `FunctionDefinition.model_validate()` -> validated Pydantic class instances.
+- Distinguish a Pydantic `BaseModel` subclass from the Qwen language model: `tests/test_models.py` exercises Pydantic validation and does **not** construct or run Qwen.
+- Point to the precise call sites in `tests/test_models.py`, including `load_object_list()`, the `PromptInput.model_validate(item)` list comprehension, and `FunctionDefinition.model_validate(item)`.
+- Explain why the class definitions contain no explicit `return`, constructor, or user-written methods: Pydantic supplies validation and initialization through `BaseModel`.
+- Revisit the distinction between Python static annotations / `Literal`, Pydantic runtime validation, and the terminology of declarative schemas; use TypeScript / Zod comparisons where helpful.
+- Clarify that input validation is not generalized sanitization and that `strict=True` and `extra="forbid"` have distinct purposes.
+
+### Future implementation / observability request
+
+The learner wants **visible step-by-step diagnostic output** while running the project to follow the movement and transformation of data. During the forthcoming loader and integration work, consider an opt-in verbose/debug mode showing file reading, parsed top-level structure, per-item validation, creation of validated objects, and later prompt construction, inference, and output handling. Keep ordinary output clean, avoid dumping large/sensitive payloads, and do not introduce noisy prints into Pydantic model declarations or tests by default. The exact CLI/debug interface has not yet been decided.
