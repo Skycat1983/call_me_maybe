@@ -6,10 +6,17 @@ Companion waypoint:
 Living collaboration guide:
 [Git collaboration and branch reconciliation](../themes/git-collaboration/index.md)
 
+## Files to have open
+
+- [Companion waypoint](../../waypoints/001-2026-11-06-repository-and-source-files.md) — the chronological record of repository setup, extraction, and cleanup.
+- [`.gitignore`](../../../../.gitignore) — the rules that keep the PDF and generated files local.
+- [`README.md`](../../../../README.md) — the repository's tracked entry point.
+- [Git collaboration theme](../themes/git-collaboration/index.md) — the current explanation of local and remote Git history.
+
 ## Agent preparation
 
-Read the companion waypoint before the discussion. Focus on Git concepts and
-the difference between source files, ignored local artifacts, and transport
+Open the files above before the discussion. Focus on Git concepts and the
+difference between source files, ignored local artifacts, and transport
 archives. Do not turn the session into a Git command exercise unless asked.
 
 ## Short recap

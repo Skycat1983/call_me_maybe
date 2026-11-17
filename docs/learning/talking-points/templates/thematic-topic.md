@@ -13,6 +13,12 @@ help that topic.
 - Last reviewed: YYYY-MM-DD
 - Prerequisites: Named documents or none
 
+## Files to have open
+
+- [`path/to/source.py`](relative/path/to/source.py) — what to inspect here.
+- [`path/to/canonical.md`](relative/path/to/canonical.md) — why this source is
+  needed during the discussion.
+
 ## Why this matters
 
 The learner's reason for understanding the topic.

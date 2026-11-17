@@ -3,11 +3,17 @@
 Companion waypoint:
 [002 — Requirements and documentation](../../waypoints/002-2026-11-06-requirements-and-documentation.md)
 
+## Files to have open
+
+- [Companion waypoint](../../waypoints/002-2026-11-06-requirements-and-documentation.md) — the chronological record of the documentation split.
+- [`docs/index.md`](../../../index.md) — the main route into requirements, references, project state, and learning records.
+- [Requirements overview](../../../requirements/overview.md) — the canonical map of what the project must satisfy.
+- [Condensed subject](../../../archive/subject-v1.7-condensed.md) — the retained source-derived material behind the working requirements.
+
 ## Agent preparation
 
-Read the companion waypoint and
-[`docs/index.md`](../../../index.md). Emphasize information architecture and the
-difference between assignment requirements and implementation design.
+Open the files above before the discussion. Emphasize information architecture
+and the difference between assignment requirements and implementation design.
 
 ## Short recap
 

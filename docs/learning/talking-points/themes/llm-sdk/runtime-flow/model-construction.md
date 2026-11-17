@@ -4,8 +4,15 @@
 - Theme: LLM SDK and `inspect_sdk`
 - Depth: Detailed execution stage 6
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Prerequisites: [Command and entry](command-and-entry.md)
+
+## Files to have open
+
+- [`llm_sdk/llm_sdk/__init__.py`](../../../../../../llm_sdk/llm_sdk/__init__.py) — the constructor, device selection, tokenizer load, and model load.
+- [`experiments/inspect_sdk.py`](../../../../../../experiments/inspect_sdk.py) — the call site and timing around construction.
+- [Known issues](../../../../../project/issues.md) — the automatic-device failure that contrasts with explicit CPU construction.
+- [Command and entry](command-and-entry.md) — the value assigned to `requested_device` before the constructor call.
 
 ## Stage 6: Construct `Small_LLM_Model`
 

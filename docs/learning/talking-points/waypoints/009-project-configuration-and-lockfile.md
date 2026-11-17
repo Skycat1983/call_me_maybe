@@ -3,20 +3,20 @@
 Companion waypoint:
 [009 — Project configuration and lockfile](../../waypoints/009-2026-11-13-project-configuration-and-lockfile.md)
 
+## Files to have open
+
+- [Companion waypoint](../../waypoints/009-2026-11-13-project-configuration-and-lockfile.md) — the provenance of the authored configuration and generated lock.
+- [`pyproject.toml`](../../../../pyproject.toml) — the root project's human-authored intent.
+- [`uv.lock`](../../../../uv.lock) — uv's generated dependency resolution.
+- [`llm_sdk/pyproject.toml`](../../../../llm_sdk/pyproject.toml) — the supplied SDK's direct dependency declarations.
+- [`llm_sdk/uv.lock`](../../../../llm_sdk/uv.lock) — the supplied SDK's independently resolved environment.
+- [`Makefile`](../../../../Makefile) — the commands and inline learner questions connecting configuration to execution.
+
 ## Agent preparation
 
-Read:
-
-- the companion waypoint;
-- `pyproject.toml`;
-- the root `uv.lock` header and first project entries;
-- `llm_sdk/pyproject.toml`;
-- the Makefile and its inline learner questions;
-- `experiments/inspect_sdk.py` and its inline learner questions;
-- [implementation rules](../../../requirements/implementation-rules.md).
-
-Keep authored intent separate from generated resolution. Ask the learner to
-reason from the declarations before discussing individual locked packages.
+Open the files above. Keep authored intent separate from generated resolution.
+Ask the learner to reason from the declarations before discussing individual
+locked packages.
 
 ## Short recap
 

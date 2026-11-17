@@ -4,8 +4,16 @@
 - Theme: LLM SDK and `inspect_sdk`
 - Depth: Question-led discussion
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Prerequisites: [Probe overview](index.md)
+
+## Files to have open
+
+- [`experiments/inspect_sdk.py`](../../../../../../experiments/inspect_sdk.py) — the source behind questions about provenance, variables, helpers, and output.
+- [`llm_sdk/llm_sdk/__init__.py`](../../../../../../llm_sdk/llm_sdk/__init__.py) — the supplied behavior to distinguish from locally authored probe code.
+- [Source walkthrough](source-walkthrough.md) — the line-by-line explanation to consult for code questions.
+- [Experiments and results](experiments-and-results.md) — the evidence-based answers about what actually ran.
+- [LLM SDK reference](../../../../../reference/llm-sdk.md) — the canonical API boundary and known caveats.
 
 ## Common questions and concise answers
 

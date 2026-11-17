@@ -4,8 +4,15 @@
 - Theme: LLM SDK and `inspect_sdk`
 - Depth: Detailed execution stage 11
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Prerequisites: [Encoding and decoding](encoding-and-decoding.md)
+
+## Files to have open
+
+- [`experiments/inspect_sdk.py`](../../../../../../experiments/inspect_sdk.py) — the reusable file-inspection helper and its three call sites.
+- [`llm_sdk/llm_sdk/__init__.py`](../../../../../../llm_sdk/llm_sdk/__init__.py) — the three public tokenizer-path getters.
+- [Explicit-CPU evidence](../../../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md) — the returned paths, existence checks, and file sizes.
+- [Encoding and decoding](encoding-and-decoding.md) — the preceding stages that use the same tokenizer.
 
 ## Stage 11: Inspect tokenizer files
 

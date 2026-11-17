@@ -10,6 +10,13 @@ for documents that actually exist.
 - Status: Living
 - Last reviewed: YYYY-MM-DD
 
+## Files to have open
+
+- [`path/to/project-file`](relative/path/to/project-file) — what this file
+  demonstrates for the theme.
+- [`path/to/canonical-source.md`](relative/path/to/canonical-source.md) — the
+  facts or requirements to consult during discussion.
+
 ## Purpose
 
 What this theme helps the learner understand.

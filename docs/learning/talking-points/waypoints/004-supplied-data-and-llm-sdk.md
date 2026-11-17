@@ -3,19 +3,20 @@
 Companion waypoint:
 [004 — Supplied data and LLM SDK](../../waypoints/004-2026-11-10-supplied-data-and-llm-sdk.md)
 
+## Files to have open
+
+- [Companion waypoint](../../waypoints/004-2026-11-10-supplied-data-and-llm-sdk.md) — the chronological record of the first data and SDK inspection.
+- [`data/input/function_calling_tests.json`](../../../../data/input/function_calling_tests.json) — the supplied prompts consumed by the future application.
+- [`data/input/functions_definition.json`](../../../../data/input/functions_definition.json) — the supplied function schemas and value types.
+- [`llm_sdk/llm_sdk/__init__.py`](../../../../llm_sdk/llm_sdk/__init__.py) — the supplied wrapper's public methods and internal implementation.
+- [LLM SDK reference](../../../reference/llm-sdk.md) — the canonical project-facing API facts.
+- [Constrained-decoding requirement](../../../requirements/constrained-decoding.md) — the behavior the application must eventually build around the SDK.
+
 ## Agent preparation
 
-Read:
-
-- the companion waypoint;
-- [LLM SDK reference](../../../reference/llm-sdk.md);
-- [Python import resolution](../../../reference/imports.md);
-- [open questions](../../../project/questions.md);
-- the two files under `data/input/`.
-
-This is a discussion session. Ask the learner to explain first, use small
-examples, and do not load the model or implement the decoder unless explicitly
-requested.
+Open the files above before the discussion. Ask the learner to explain first,
+use small examples, and do not load the model or implement the decoder unless
+explicitly requested.
 
 ## Short recap
 

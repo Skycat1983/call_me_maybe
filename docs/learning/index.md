@@ -37,8 +37,9 @@ pages should link back to a waypoint when historical context matters.
 | [009](waypoints/009-2026-11-13-project-configuration-and-lockfile.md) | 2026-11-13 | Project configuration and lockfile | Direct dependencies traced to requirements; uv lock generation and synchronization documented; inline learner questions answered. |
 | [010](waypoints/010-2026-11-13-talking-points-architecture.md) | 2026-11-13 | Talking-points architecture | Chronological discussions separated from living thematic learning; navigation, maintenance rules, templates, and agent instructions established. |
 | [011](waypoints/011-2026-11-13-pydantic-input-models.md) | 2026-11-13 | Pydantic input models | First production package created; strict prompt and function-definition models verified against valid and invalid data. |
+| [012](waypoints/012-2026-11-17-talking-points-working-files.md) | 2026-11-17 | Talking-points working files | Every discussion guide now names the exact repository files to open; agent rules, templates, and validation guidance preserve the convention. |
 
-The next waypoint ID is **012**.
+The next waypoint ID is **013**.
 
 ## Current registers
 

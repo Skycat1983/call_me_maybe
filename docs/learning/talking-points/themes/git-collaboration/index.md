@@ -5,6 +5,13 @@
 - Last reviewed: 2026-11-17
 - Prerequisites: Basic working tree, commit, branch, remote, pull, and push
 
+## Files to have open
+
+- [`AGENTS.md`](../../../../../AGENTS.md) — the repository rule to inspect the working tree and preserve other contributors' changes.
+- [Waypoint 001](../../../waypoints/001-2026-11-06-repository-and-source-files.md) — the original repository and remote setup in chronological context.
+- [Talking points 001](../../waypoints/001-repository-and-source-files.md) — the foundational Git concepts that precede branch reconciliation.
+- [Project status](../../../../project/status.md) — the current project state to compare with Git history before changing it.
+
 ## Purpose
 
 Use this theme when local `main` and GitHub's `origin/main` both contain new

@@ -4,8 +4,15 @@
 - Theme: LLM SDK and `inspect_sdk`
 - Depth: Detailed execution stages 12–15
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Prerequisites: [Tokenizer files](tokenizer-files.md)
+
+## Files to have open
+
+- [`experiments/inspect_sdk.py`](../../../../../../experiments/inspect_sdk.py) — the logits request, ranking, and candidate-decoding loop.
+- [`llm_sdk/llm_sdk/__init__.py`](../../../../../../llm_sdk/llm_sdk/__init__.py) — the model forward pass and returned logits conversion.
+- [Constrained-decoding requirement](../../../../../requirements/constrained-decoding.md) — why next-token scores matter to the eventual application.
+- [Explicit-CPU evidence](../../../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md) — the observed logit count, timing, token IDs, scores, and text.
 
 ## Stage 12: Request next-token logits
 

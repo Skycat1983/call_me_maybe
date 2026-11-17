@@ -3,18 +3,19 @@
 Companion waypoint:
 [006 — First SDK probe](../../waypoints/006-2026-11-10-first-sdk-probe.md)
 
+## Files to have open
+
+- [Companion waypoint](../../waypoints/006-2026-11-10-first-sdk-probe.md) — the experiment question, failure, and interpretation at that point in time.
+- [`experiments/inspect_sdk.py`](../../../../experiments/inspect_sdk.py) — the probe whose stages reveal where construction stopped.
+- [`llm_sdk/llm_sdk/__init__.py`](../../../../llm_sdk/llm_sdk/__init__.py) — the constructor path that triggered device-map handling.
+- [Known issues](../../../project/issues.md) — the recorded constructor problem and its current status.
+- [Open questions](../../../project/questions.md) — the uncertainties that shaped the next controlled experiment.
+
 ## Agent preparation
 
-Read:
-
-- the companion waypoint;
-- `experiments/inspect_sdk.py`;
-- [known issues](../../../project/issues.md);
-- [open questions](../../../project/questions.md).
-
-Interpret the failure and choose the next controlled experiment. Do not
-install `accelerate`, change SDK loading code, or redesign the application
-during the voice session.
+Open the files above, interpret the failure, and choose the next controlled
+experiment. Do not install `accelerate`, change SDK loading code, or redesign
+the application during the voice session.
 
 ## Short recap
 

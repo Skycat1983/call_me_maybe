@@ -3,11 +3,19 @@
 Companion waypoint:
 [003 — Tooling and storage](../../waypoints/003-2026-11-06-tooling-and-storage.md)
 
+## Files to have open
+
+- [Companion waypoint](../../waypoints/003-2026-11-06-tooling-and-storage.md) — the chronological record of tooling setup and storage cleanup.
+- [`pyproject.toml`](../../../../pyproject.toml) — the human-authored dependency and tool intent.
+- [`uv.lock`](../../../../uv.lock) — the generated, exact dependency resolution.
+- [`Makefile`](../../../../Makefile) — the project commands and `/tmp` storage configuration.
+- [Known issues](../../../project/issues.md) — the environment and dependency problems that remain relevant.
+
 ## Agent preparation
 
-Read the companion waypoint, the root `pyproject.toml`, and the `Makefile`.
-Explain the role of each tool before discussing commands. Do not run dependency
-installation during a voice discussion unless explicitly requested.
+Open the files above before the discussion. Explain the role of each tool
+before discussing commands. Do not run dependency installation during a voice
+discussion unless explicitly requested.
 
 ## Short recap
 

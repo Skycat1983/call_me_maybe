@@ -139,6 +139,31 @@ Waypoint companions instead identify their numbered waypoint and link it in
 both directions. A maintenance-only waypoint can omit a companion when there
 is no useful voice discussion to conduct.
 
+## Standard files-to-have-open section
+
+Every waypoint companion and every thematic discussion guide must contain a
+near-top section with this exact heading:
+
+```markdown
+## Files to have open
+
+- [`path/to/file.py`](relative/path/to/file.py) — what to inspect in this file.
+- [`path/to/reference.md`](relative/path/to/reference.md) — why it is needed
+  during the discussion.
+```
+
+This is the voice session's working set, not a general bibliography. Link to
+specific files rather than directories and add a short purpose for each link.
+Include the source code, configuration, test, requirement, reference,
+waypoint, or evidence files that the learner may need to look at while talking
+through the point. Keep the list short enough to use during a conversation.
+
+Update the section whenever a file moves, the guide gains a new subject, or a
+better canonical source replaces an old one. The `Related learning` section is
+for onward navigation and does not replace this preparation list. Navigation
+indexes may direct readers to the selected guide's list instead of repeating
+every guide's working set.
+
 ## Standard related-learning section
 
 End thematic documents with a contextual section resembling:
@@ -162,7 +187,7 @@ file.
 
 A useful discussion guide should tell the agent to:
 
-1. read the guide and its linked canonical sources;
+1. open the files named in the guide's `Files to have open` section;
 2. recap the context briefly;
 3. ask one question at a time;
 4. let the learner explain first;
@@ -197,6 +222,9 @@ After a relevant experiment or implementation step:
 
 ## Validation checklist
 
+- [ ] Every discussion guide has a near-top `Files to have open` section.
+- [ ] Each file in that section is linked directly, exists, and has a concise
+      explanation of what to inspect during the discussion.
 - [ ] All relative Markdown targets exist.
 - [ ] Code fences are balanced.
 - [ ] Headings and document titles are unique enough to navigate.

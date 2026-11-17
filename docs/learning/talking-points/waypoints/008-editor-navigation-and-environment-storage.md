@@ -3,18 +3,19 @@
 Companion waypoint:
 [008 — Editor navigation and environment storage](../../waypoints/008-2026-11-12-editor-navigation-and-environment-storage.md)
 
+## Files to have open
+
+- [Companion waypoint](../../waypoints/008-2026-11-12-editor-navigation-and-environment-storage.md) — the duplicate-environment diagnosis and repair record.
+- [`.vscode/settings.json`](../../../../.vscode/settings.json) — the selected interpreter and source-analysis paths used by VS Code.
+- [`pyproject.toml`](../../../../pyproject.toml) — project-level uv and Python configuration.
+- [`Makefile`](../../../../Makefile) — command-level environment and cache variables.
+- [`experiments/inspect_sdk.py`](../../../../experiments/inspect_sdk.py) — imports, annotations, and learner questions used for editor navigation.
+- [Python import resolution](../../../reference/imports.md) — the canonical explanation of how Python and the editor find modules.
+
 ## Agent preparation
 
-Read:
-
-- the companion waypoint;
-- `.vscode/settings.json`;
-- `pyproject.toml` and the Makefile;
-- [Python import resolution](../../../reference/imports.md);
-- the learner's question comments in `experiments/inspect_sdk.py`.
-
-Explain concepts before suggesting commands. Do not remove learner question
-comments during the voice discussion.
+Open the files above. Explain concepts before suggesting commands. Do not
+remove learner question comments during the voice discussion.
 
 ## Short recap
 

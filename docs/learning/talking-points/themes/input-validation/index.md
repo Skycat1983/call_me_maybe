@@ -2,8 +2,16 @@
 
 - Kind: Thematic talking-point index
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Prerequisites: Basic Python classes, dictionaries, and type hints
+
+## Files to have open
+
+- [`src/models.py`](../../../../../src/models.py) — the Pydantic models and validation rules discussed in this theme.
+- [`tests/test_models.py`](../../../../../tests/test_models.py) — the examples that prove accepted and rejected inputs.
+- [`data/input/functions_definition.json`](../../../../../data/input/functions_definition.json) — supplied nested data exercised by the models.
+- [`data/input/function_calling_tests.json`](../../../../../data/input/function_calling_tests.json) — the supplied prompt shape at the other input boundary.
+- [Input/output contract](../../../../requirements/input-output-contract.md) — the canonical requirements against which the models are judged.
 
 ## Purpose
 

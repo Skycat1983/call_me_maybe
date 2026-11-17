@@ -2,8 +2,16 @@
 
 - Kind: Thematic talking-point index
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Prerequisites: Basic Python functions, classes, imports, and lists
+
+## Files to have open
+
+- [`experiments/inspect_sdk.py`](../../../../../experiments/inspect_sdk.py) — the local diagnostic program used throughout the theme.
+- [`llm_sdk/llm_sdk/__init__.py`](../../../../../llm_sdk/llm_sdk/__init__.py) — the supplied wrapper implementation and public interface being investigated.
+- [LLM SDK reference](../../../../reference/llm-sdk.md) — the canonical project-facing facts and public-interface boundary.
+- [Explicit-CPU evidence](../../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md) — the runtime output behind the observed values.
+- [`Makefile`](../../../../../Makefile) — the targets and environment variables that launch the probe.
 
 ## Purpose
 

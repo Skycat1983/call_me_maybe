@@ -4,8 +4,15 @@
 - Theme: LLM SDK and `inspect_sdk`
 - Depth: Detailed execution stages 7–10
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Prerequisites: [Model construction](model-construction.md)
+
+## Files to have open
+
+- [`experiments/inspect_sdk.py`](../../../../../../experiments/inspect_sdk.py) — the prompt, tensor inspection, list conversion, and two decode calls.
+- [`llm_sdk/llm_sdk/__init__.py`](../../../../../../llm_sdk/llm_sdk/__init__.py) — the `encode()` and `decode()` implementations.
+- [LLM SDK reference](../../../../../reference/llm-sdk.md) — the declared API shapes and the observed decode caveat.
+- [Model construction](model-construction.md) — the initialized object and device state used by encoding.
 
 ## Stage 7: Encode the prompt
 

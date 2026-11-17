@@ -2,7 +2,7 @@
 
 - Kind: Chronological discussion index
 - Status: Current
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 
 Waypoint talking points prepare voice discussions about completed rounds of
 work. The full chronological evidence remains in `docs/learning/waypoints/`.
@@ -22,16 +22,18 @@ work. The full chronological evidence remains in `docs/learning/waypoints/`.
 | 009 | [Project configuration and lockfile](009-project-configuration-and-lockfile.md) | TOML provenance, dependency categories, uv resolution, and synchronization |
 | 011 | [Pydantic input models](011-pydantic-input-models.md) | Runtime validation, nested models, supported value types, strict fields, and focused tests |
 
-Waypoint 010 is a [maintenance milestone](../../waypoints/010-2026-11-13-talking-points-architecture.md),
-not a subject selected for voice discussion.
+Waypoints [010](../../waypoints/010-2026-11-13-talking-points-architecture.md)
+and [012](../../waypoints/012-2026-11-17-talking-points-working-files.md) are
+maintenance milestones, not subjects selected for voice discussion.
 
 ## How to use a waypoint discussion
 
 Tell the agent:
 
-> Read the selected companion and its linked chronological waypoint. Use its
-> thematic links for current explanations. Ask one question at a time and help
-> me explain what changed, what evidence supports it, and what remains open.
+> Read the selected companion and open every repository file in its `Files to
+> have open` section. Use its thematic links for current explanations. Ask one
+> question at a time and help me explain what changed, what evidence supports
+> it, and what remains open.
 
 ## Creating the next companion
 

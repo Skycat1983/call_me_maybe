@@ -4,8 +4,15 @@
 - Theme: LLM SDK and `inspect_sdk`
 - Depth: Applied code walkthrough
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Prerequisites: [Probe overview](index.md)
+
+## Files to have open
+
+- [`experiments/inspect_sdk.py`](../../../../../../experiments/inspect_sdk.py) — the primary source to read from imports through the module guard.
+- [`llm_sdk/llm_sdk/__init__.py`](../../../../../../llm_sdk/llm_sdk/__init__.py) — the implementation behind each public SDK call.
+- [Probe overview](index.md) — the experiment's provenance, purpose, and boundaries.
+- [`Makefile`](../../../../../../Makefile) — the command-line values passed into `parse_device_argument()`.
 
 ## Source walkthrough
 

@@ -9,19 +9,19 @@ Detailed topic briefing:
 Living execution walkthrough:
 [full `inspect_sdk` flow](../themes/llm-sdk/runtime-flow/index.md)
 
+## Files to have open
+
+- [Companion waypoint](../../waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md) — the controlled change and conclusions from the successful run.
+- [`experiments/inspect_sdk.py`](../../../../experiments/inspect_sdk.py) — the complete public-interface probe to trace.
+- [`llm_sdk/llm_sdk/__init__.py`](../../../../llm_sdk/llm_sdk/__init__.py) — the SDK methods called by the probe.
+- [CPU terminal evidence](../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md) — the captured runtime output behind the observations.
+- [LLM SDK reference](../../../reference/llm-sdk.md) — the canonical description of the allowed interface.
+
 ## Agent preparation
 
-Read:
-
-- the companion waypoint;
-- `experiments/inspect_sdk.py`;
-- [LLM SDK reference](../../../reference/llm-sdk.md);
-- [2026-11-17 CPU terminal evidence](../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md);
-- [open questions](../../../project/questions.md);
-- [known issues](../../../project/issues.md).
-
-Discuss observed behavior before proposing application design. Do not begin a
-generation loop or prompt implementation during this session.
+Open the files above. Discuss observed behavior before proposing application
+design. Do not begin a generation loop or prompt implementation during this
+session.
 
 ## Short recap
 

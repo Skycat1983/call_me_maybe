@@ -3,11 +3,19 @@
 Companion waypoint:
 [005 — Environment repair and cache placement](../../waypoints/005-2026-11-10-environment-repair-and-cache-placement.md)
 
+## Files to have open
+
+- [Companion waypoint](../../waypoints/005-2026-11-10-environment-repair-and-cache-placement.md) — the repair evidence and storage decisions in chronological context.
+- [`Makefile`](../../../../Makefile) — the environment and cache paths passed to uv and Python commands.
+- [`pyproject.toml`](../../../../pyproject.toml) — the project settings from which the environment is recreated.
+- [`uv.lock`](../../../../uv.lock) — the exact resolved packages used for reconstruction.
+- [`.vscode/settings.json`](../../../../.vscode/settings.json) — the editor's interpreter and analysis-path configuration.
+
 ## Agent preparation
 
-Read the companion waypoint and the root `Makefile`. Keep the discussion
-focused on storage roles and reproducibility. Do not instantiate Qwen during
-the voice session unless explicitly requested.
+Open the files above before the discussion. Keep the discussion focused on
+storage roles and reproducibility. Do not instantiate Qwen during the voice
+session unless explicitly requested.
 
 ## Short recap
 

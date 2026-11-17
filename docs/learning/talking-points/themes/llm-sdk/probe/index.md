@@ -4,7 +4,7 @@
 - Theme: LLM SDK and `inspect_sdk`
 - Depth: Applied overview and results
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Prerequisites: [LLM-SDK theme index](../index.md)
 
 Use this document to prepare an agent for a voice discussion about
@@ -15,6 +15,14 @@ without first reconstructing the experiment from the repository.
 For a more granular Make-to-model walkthrough with a complete variable ledger
 and the internals of `Small_LLM_Model`, also read the
 [living full-flow guide](../runtime-flow/index.md).
+
+## Files to have open
+
+- [`experiments/inspect_sdk.py`](../../../../../../experiments/inspect_sdk.py) — the probe source to trace during the conversation.
+- [`llm_sdk/llm_sdk/__init__.py`](../../../../../../llm_sdk/llm_sdk/__init__.py) — the supplied class and methods called by the probe.
+- [`Makefile`](../../../../../../Makefile) — the default and explicit-CPU commands that start the experiment.
+- [LLM SDK reference](../../../../../reference/llm-sdk.md) — the canonical interface facts and restrictions.
+- [Explicit-CPU evidence](../../../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md) — the observed output to compare with source-level expectations.
 
 ## Suggested instruction for the voice agent
 

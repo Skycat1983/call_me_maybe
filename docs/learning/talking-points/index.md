@@ -17,7 +17,7 @@ living themes.
 
 ## Current learning position
 
-- Latest chronological record: [Waypoint 011 — Pydantic input models](../waypoints/011-2026-11-13-pydantic-input-models.md)
+- Latest chronological record: [Waypoint 012 — Talking-points working files](../waypoints/012-2026-11-17-talking-points-working-files.md)
 - Current progress discussion: [Talking points 011 — Pydantic input models](waypoints/011-pydantic-input-models.md)
 - Current input theme: [Input validation and data models](themes/input-validation/index.md)
 - Current tooling theme: [Python project tooling](themes/python-tooling/index.md)
@@ -28,7 +28,8 @@ living themes.
 
 The structural migration is complete. Chronological companions are under
 `waypoints/`; living subject guides are under `themes/`. Waypoint 010 records
-the maintenance work but intentionally has no voice-discussion companion.
+the original architecture work, and Waypoint 012 records the preparation-list
+standard. Both are maintenance milestones without voice-discussion companions.
 
 ## Two documentation paths
 
@@ -58,7 +59,8 @@ project-application, detailed-flow, and question routes.
 
 Unless a guide says otherwise, the agent should:
 
-1. Read the selected talking-points file and its linked sources.
+1. Read the selected guide and open every repository file named in its
+   `Files to have open` section.
 2. Start with a short recap and state the intended depth.
 3. Ask one question at a time.
 4. Let the learner explain first, then correct or extend the explanation.
@@ -74,8 +76,9 @@ Unless a guide says otherwise, the agent should:
 ## Suggested instruction for an agent
 
 > Read `docs/learning/talking-points/index.md`, then follow the waypoint or
-> theme route I name. Read that guide's linked sources before beginning. Ask me
-> one question at a time and help me explain the subject in my own words.
+> theme route I name. Open every repository file in that guide's `Files to
+> have open` section before beginning. Ask me one question at a time and help
+> me explain the subject in my own words.
 
 ## Maintenance
 

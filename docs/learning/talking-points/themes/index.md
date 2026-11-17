@@ -8,6 +8,10 @@ Thematic talking points explain subjects independently of when they were
 encountered. They are living documents that can offer surface explanations,
 theory, project application, detailed flows, and question-led discussions.
 
+After choosing a guide, open every repository file in its `Files to have open`
+section before starting the discussion. That section is the guide's focused
+working set; its final `Related learning` section is broader navigation.
+
 ## Available themes
 
 | Theme | Best for | Available routes |

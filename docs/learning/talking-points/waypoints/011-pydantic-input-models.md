@@ -3,20 +3,20 @@
 Companion waypoint:
 [011 — Pydantic input models](../../waypoints/011-2026-11-13-pydantic-input-models.md)
 
+## Files to have open
+
+- [Companion waypoint](../../waypoints/011-2026-11-13-pydantic-input-models.md) — the implementation decision and validation evidence in chronological context.
+- [`src/models.py`](../../../../src/models.py) — the Pydantic models, type alias, and strict validation configuration.
+- [`tests/test_models.py`](../../../../tests/test_models.py) — the accepted and rejected cases that define the tested boundary.
+- [`data/input/functions_definition.json`](../../../../data/input/functions_definition.json) — representative raw data validated by the models.
+- [Input/output contract](../../../requirements/input-output-contract.md) — the canonical external-data requirements.
+- [Input-validation theme](../themes/input-validation/index.md) — the living explanation that connects the code to the wider design.
+
 ## Agent preparation
 
-Read:
-
-- the companion waypoint;
-- the [input-validation theme](../themes/input-validation/index.md);
-- [`src/models.py`](../../../../src/models.py);
-- [`tests/test_models.py`](../../../../tests/test_models.py);
-- the [input/output contract](../../../requirements/input-output-contract.md);
-- the [implementation rules](../../../requirements/implementation-rules.md).
-
-Focus on the input boundary and Pydantic concepts. Do not begin JSON loading
-or model integration during the discussion unless the learner explicitly
-changes the session's purpose.
+Open the files above. Focus on the input boundary and Pydantic concepts. Do not
+begin JSON loading or model integration during the discussion unless the
+learner explicitly changes the session's purpose.
 
 ## Short recap
 

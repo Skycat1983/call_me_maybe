@@ -9,7 +9,7 @@ from pydantic import ValidationError
 
 from src.models import FunctionDefinition, PromptInput, ValueDefinition
 
-
+# ? Path = this path? resolve is proving it? what is parents[1]?
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 INPUT_DIRECTORY = PROJECT_ROOT / "data" / "input"
 

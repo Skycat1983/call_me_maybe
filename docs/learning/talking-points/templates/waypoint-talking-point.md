@@ -8,10 +8,18 @@ placeholders. Do not link to this template as if it were a real waypoint.
 
 Companion waypoint: path to chronological waypoint
 
+## Files to have open
+
+- [Companion waypoint](relative/path/to/waypoint.md) — the chronological record
+  of what changed and why.
+- [`path/to/source.py`](relative/path/to/source.py) — the code or configuration
+  to inspect during the conversation.
+
 ## Agent preparation
 
-Read the companion waypoint, relevant thematic guides, canonical references,
-requirements, and source files.
+Open the files above before the discussion. State the intended depth and use
+the related thematic guides for any current explanation that goes beyond this
+historical waypoint.
 
 ## Short recap
 

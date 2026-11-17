@@ -4,8 +4,16 @@
 - Theme: LLM SDK and `inspect_sdk`
 - Depth: Detailed reference and question-led discussion
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Prerequisites: [Runtime-flow map](index.md)
+
+## Files to have open
+
+- [`experiments/inspect_sdk.py`](../../../../../../experiments/inspect_sdk.py) — the owner and scope of probe variables in the ledger.
+- [`llm_sdk/llm_sdk/__init__.py`](../../../../../../llm_sdk/llm_sdk/__init__.py) — the owner and scope of SDK variables and object state.
+- [Runtime-flow map](index.md) — the stage ordering used to place each value in context.
+- [Explicit-CPU evidence](../../../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md) — the recorded example values and shapes.
+- [LLM SDK reference](../../../../../reference/llm-sdk.md) — the public-interface facts to separate from internal implementation details.
 
 ## Complete variable ledger
 

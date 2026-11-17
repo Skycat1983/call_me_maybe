@@ -7,6 +7,14 @@
 - Last reviewed: 2026-11-17
 - Prerequisites: [Probe overview](index.md)
 
+## Files to have open
+
+- [`experiments/inspect_sdk.py`](../../../../../../experiments/inspect_sdk.py) — the controlled checks that produced the results.
+- [`Makefile`](../../../../../../Makefile) — the two targets that change the requested device while holding the probe constant.
+- [Explicit-CPU evidence](../../../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md) — the preserved primary output from a successful run.
+- [Waypoint 006](../../../../waypoints/006-2026-11-10-first-sdk-probe.md) — the initial automatic-device failure and its interpretation.
+- [Waypoint 007](../../../../waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md) — the one-variable CPU experiment and conclusions.
+
 ## The two real experiments
 
 ### Default device selection

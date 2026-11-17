@@ -4,8 +4,16 @@
 - Theme: LLM SDK and `inspect_sdk`
 - Depth: Detailed execution stages 0–5
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Prerequisites: [Runtime-flow map](index.md)
+
+## Files to have open
+
+- [`experiments/inspect_sdk.py`](../../../../../../experiments/inspect_sdk.py) — the module entry point and command-line parser.
+- [`Makefile`](../../../../../../Makefile) — the target and environment variables that launch the process.
+- [`pyproject.toml`](../../../../../../pyproject.toml) — the project and uv configuration used before module loading.
+- [`uv.lock`](../../../../../../uv.lock) — the resolved packages available to the run.
+- [Runtime-flow map](index.md) — the full sequence surrounding stages 0–5.
 
 ## Stage 0: Before execution
 

@@ -2,8 +2,16 @@
 
 - Kind: Thematic talking-point index
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Prerequisites: None
+
+## Files to have open
+
+- [`pyproject.toml`](../../../../../pyproject.toml) — the root project's human-authored dependency and tool intent.
+- [`uv.lock`](../../../../../uv.lock) — uv's generated exact resolution of that intent.
+- [`Makefile`](../../../../../Makefile) — the repeatable commands and `/tmp` storage configuration.
+- [`llm_sdk/pyproject.toml`](../../../../../llm_sdk/pyproject.toml) — the local SDK package metadata that contributes transitive dependencies.
+- [`.vscode/settings.json`](../../../../../.vscode/settings.json) — editor interpreter and import-navigation configuration.
 
 ## Purpose
 

@@ -5,7 +5,7 @@
 - Depth: Detailed execution flow
 - Status: Living
 - First created: 2026-11-13
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Primary probe: `experiments/inspect_sdk.py`
 - Supplied implementation: `llm_sdk/llm_sdk/__init__.py`
 
@@ -19,6 +19,14 @@ It complements the [`inspect_sdk.py` agent briefing](../probe/index.md):
   likely questions;
 - this guide emphasizes control flow, call boundaries, variables, types,
   shapes, object state, and what every layer is holding at each moment.
+
+## Files to have open
+
+- [`experiments/inspect_sdk.py`](../../../../../../experiments/inspect_sdk.py) — the coordinator whose complete execution flow is being traced.
+- [`llm_sdk/llm_sdk/__init__.py`](../../../../../../llm_sdk/llm_sdk/__init__.py) — the implementation entered at each SDK boundary.
+- [`Makefile`](../../../../../../Makefile) — the targets and environment that begin the flow.
+- [`pyproject.toml`](../../../../../../pyproject.toml) — the project and uv configuration active before Python starts.
+- [Explicit-CPU evidence](../../../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md) — the recorded values used in the stage descriptions and variable ledger.
 
 ## Suggested instruction for a voice agent
 

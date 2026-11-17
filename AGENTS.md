@@ -56,6 +56,13 @@ Talking points are a conversational learning layer, not a substitute for
 requirements or canonical references. Link to the canonical source instead of
 duplicating long explanations unnecessarily.
 
+Every waypoint or thematic discussion guide must contain a near-top
+`## Files to have open` section. Link each repository file directly and state
+briefly what the learner and voice agent should inspect there. Keep this list
+focused on files needed during the conversation, update it when files move or
+the guide's scope changes, and do not treat the end-of-file related-learning
+links as a substitute.
+
 Evidence captures are not talking points. Retain only small, meaningful,
 sanitized captures; record their command, date, environment, exit-status
 knowledge, omissions, and related learning. Keep routine generated output in
@@ -89,6 +96,8 @@ questions. Do not create one for a spelling correction or trivial command.
   theory and application confusingly, or grows beyond roughly 300–500 lines.
 - Include metadata, prerequisites, related material, canonical references,
   source links, relevant waypoints, and a last-reviewed date.
+- Include and maintain a near-top `Files to have open` section with exact
+  repository-file links and a short reason for opening each one.
 - Add or update navigation when files move or themes grow.
 
 ## Source and generated files
@@ -111,6 +120,8 @@ Validate in proportion to the change. For documentation restructuring:
 - run `git diff --check`;
 - inspect `git status` and the complete diff;
 - confirm indexes, breadcrumbs, and related-learning sections agree.
+- confirm every discussion guide's `Files to have open` links resolve and
+  still match the material discussed.
 
 For Python or configuration changes, also run the relevant syntax, lint,
 lockfile, and dry-run checks documented by the project.

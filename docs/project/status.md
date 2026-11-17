@@ -70,6 +70,9 @@ loading and clear validation errors without involving the LLM.
   changing runtime behavior.
 - Extended issue I-002 with the supplied SDK's repository-wide Mypy findings.
 - Added the living input-validation theme and Waypoint 011 discussion guide.
+- Added an explicit `Files to have open` working set to every waypoint and
+  thematic discussion guide, with permanent agent, template, and validation
+  rules for maintaining it.
 
 ## In progress
 
