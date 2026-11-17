@@ -49,6 +49,8 @@ These documents describe the work as it stands now.
   voice-mode discussions and living topic-centered learning routes.
 - [Python project tooling](learning/talking-points/themes/python-tooling/index.md):
   dependencies, uv, locks, Make, storage, imports, and editor navigation.
+- [Git collaboration](learning/talking-points/themes/git-collaboration/index.md):
+  divergent branches, pull policies, rebasing, conflicts, and safe pushes.
 - [LLM SDK and `inspect_sdk`](learning/talking-points/themes/llm-sdk/index.md):
   probe source, runtime evidence, model construction, tokens, and logits.
 - [Input validation and data models](learning/talking-points/themes/input-validation/index.md):

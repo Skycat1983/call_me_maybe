@@ -2,7 +2,7 @@
 
 - Kind: Living thematic index
 - Status: Current
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 
 Thematic talking points explain subjects independently of when they were
 encountered. They are living documents that can offer surface explanations,
@@ -15,6 +15,7 @@ theory, project application, detailed flows, and question-led discussions.
 | [LLM SDK and `inspect_sdk`](llm-sdk/index.md) | Understanding the supplied model wrapper, probe source, runtime behavior, tensors, decoding, tokenizer files, logits, and call flow | Quick summary, provenance, code walkthrough, observed results, detailed execution, variable ledger, and discussion questions |
 | [Python project tooling](python-tooling/index.md) | Understanding TOML, uv, locks, installation, Make, `/tmp` environments, caches, imports, and editor navigation | Surface model, configuration and locking, command execution, storage, imports, editor navigation, and discussion questions |
 | [Input validation and data models](input-validation/index.md) | Understanding how external JSON becomes trusted Pydantic objects before application or LLM logic | Overview, code walkthrough, tests, runtime versus static validation, current boundaries, and future loader questions |
+| [Git collaboration and branch reconciliation](git-collaboration/index.md) | Understanding divergent local/remote histories, pull policies, rebasing, conflicts, and safe pushes when multiple agents contribute | Commit graphs, diagnosis commands, merge/rebase/fast-forward comparison, conflict recovery, and recall questions |
 
 ## Planned reading routes
 
@@ -33,6 +34,8 @@ content exists, not as empty placeholders.
 
 ```text
 themes/
+├── git-collaboration/
+│   └── index.md
 ├── input-validation/
 │   └── index.md
 ├── python-tooling/

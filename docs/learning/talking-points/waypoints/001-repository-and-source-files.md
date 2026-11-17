@@ -3,6 +3,9 @@
 Companion waypoint:
 [001 — Repository and source files](../../waypoints/001-2026-11-06-repository-and-source-files.md)
 
+Living collaboration guide:
+[Git collaboration and branch reconciliation](../themes/git-collaboration/index.md)
+
 ## Agent preparation
 
 Read the companion waypoint before the discussion. Focus on Git concepts and

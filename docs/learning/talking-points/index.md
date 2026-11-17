@@ -21,6 +21,7 @@ living themes.
 - Current progress discussion: [Talking points 011 — Pydantic input models](waypoints/011-pydantic-input-models.md)
 - Current input theme: [Input validation and data models](themes/input-validation/index.md)
 - Current tooling theme: [Python project tooling](themes/python-tooling/index.md)
+- Current Git collaboration theme: [Branch reconciliation](themes/git-collaboration/index.md)
 - Current code and SDK theme: [LLM SDK and `inspect_sdk`](themes/llm-sdk/index.md)
 - Current deep technical guide: [Full `inspect_sdk` flow](themes/llm-sdk/runtime-flow/index.md)
 - Current SDK terminal evidence: [2026-11-17 explicit-CPU run](../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md)

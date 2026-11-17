@@ -123,6 +123,7 @@ the tooling as a single hidden action.
 - [Talking-points hub](../../index.md)
 - [Thematic discussions](../index.md)
 - [LLM SDK and `inspect_sdk`](../llm-sdk/index.md)
+- [Git collaboration and branch reconciliation](../git-collaboration/index.md)
 - [Implementation rules](../../../../requirements/implementation-rules.md)
 - [Project status](../../../../project/status.md)
 - [Learning roadmap](../../../roadmap.md)

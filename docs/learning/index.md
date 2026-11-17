@@ -58,6 +58,7 @@ The next waypoint ID is **012**.
 - [Python project tooling](talking-points/themes/python-tooling/index.md)
 - [LLM SDK and `inspect_sdk`](talking-points/themes/llm-sdk/index.md)
 - [Input validation and data models](talking-points/themes/input-validation/index.md)
+- [Git collaboration and branch reconciliation](talking-points/themes/git-collaboration/index.md)
 - [Requirements overview](../requirements/overview.md)
 - [Input/output contract](../requirements/input-output-contract.md)
 - [Constrained decoding requirements](../requirements/constrained-decoding.md)
