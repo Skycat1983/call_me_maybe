@@ -38,8 +38,10 @@ pages should link back to a waypoint when historical context matters.
 | [010](waypoints/010-2026-11-13-talking-points-architecture.md) | 2026-11-13 | Talking-points architecture | Chronological discussions separated from living thematic learning; navigation, maintenance rules, templates, and agent instructions established. |
 | [011](waypoints/011-2026-11-13-pydantic-input-models.md) | 2026-11-13 | Pydantic input models | First production package created; strict prompt and function-definition models verified against valid and invalid data. |
 | [012](waypoints/012-2026-11-17-talking-points-working-files.md) | 2026-11-17 | Talking-points working files | Every discussion guide now names the exact repository files to open; agent rules, templates, and validation guidance preserve the convention. |
+| [013](waypoints/013-2026-11-17-json-loading-boundary.md) | 2026-11-17 | JSON loading boundary | File, JSON, array, and per-item validation implemented with clear application errors and nine focused tests. |
+| [014](waypoints/014-2026-11-17-cli-input-shell.md) | 2026-11-17 | CLI input shell | Required path flags, defaults, typed CLI configuration, clean input errors, and module execution verified with eight focused tests. |
 
-The next waypoint ID is **013**.
+The next waypoint ID is **015**.
 
 ## Current registers
 

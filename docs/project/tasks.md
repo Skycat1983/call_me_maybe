@@ -1,6 +1,6 @@
 # Project Tasks
 
-Last reviewed: 2026-11-13
+Last reviewed: 2026-11-17
 
 Tasks are grouped by milestone. Check an item only after its result has been verified.
 
@@ -29,7 +29,7 @@ Tasks are grouped by milestone. Check an item only after its result has been ver
 - [ ] Define component boundaries and data flow.
 - [x] Decide the root package and configuration layout.
 - [x] Create root `pyproject.toml` and `uv.lock`.
-- [ ] Create the `src` package and module entry point.
+- [x] Create the `src` package and module entry point.
 - [x] Create the required Makefile.
 - [x] Extend `.gitignore` for generated output and development caches.
 
@@ -38,10 +38,10 @@ Tasks are grouped by milestone. Check an item only after its result has been ver
 - [x] Define Pydantic models for prompts.
 - [x] Define Pydantic models for function definitions.
 - [ ] Define Pydantic models for output records.
-- [ ] Implement JSON file loading and validation.
-- [ ] Implement CLI path arguments and defaults.
-- [ ] Implement clear file and validation errors.
-- [ ] Add focused tests for input and CLI behavior.
+- [x] Implement JSON file loading and validation.
+- [x] Implement CLI path arguments and defaults.
+- [x] Implement clear file and validation errors.
+- [x] Add focused tests for input and CLI behavior.
 
 ## M3: LLM integration and function selection
 

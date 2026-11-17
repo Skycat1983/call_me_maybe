@@ -68,7 +68,7 @@ lint-strict:
 	uv run mypy . --strict
 
 test:
-	uv run pytest
+	uv run python -m pytest
 
 inspect-sdk:
 	uv run python experiments/inspect_sdk.py

@@ -19,6 +19,7 @@ working set; its final `Related learning` section is broader navigation.
 | [LLM SDK and `inspect_sdk`](llm-sdk/index.md) | Understanding the supplied model wrapper, probe source, runtime behavior, tensors, decoding, tokenizer files, logits, and call flow | Quick summary, provenance, code walkthrough, observed results, detailed execution, variable ledger, and discussion questions |
 | [Python project tooling](python-tooling/index.md) | Understanding TOML, uv, locks, installation, Make, `/tmp` environments, caches, imports, and editor navigation | Surface model, configuration and locking, command execution, storage, imports, editor navigation, and discussion questions |
 | [Input validation and data models](input-validation/index.md) | Understanding how external JSON becomes trusted Pydantic objects before application or LLM logic | Overview, code walkthrough, tests, runtime versus static validation, current boundaries, and future loader questions |
+| [Command-line interface](command-line-interface/index.md) | Understanding how `python -m src`, argparse, typed paths, streams, exit codes, and loader errors fit together | Module entry, parsing, typed configuration, error policy, test evidence, and future output handoff |
 | [Git collaboration and branch reconciliation](git-collaboration/index.md) | Understanding divergent local/remote histories, pull policies, rebasing, conflicts, and safe pushes when multiple agents contribute | Commit graphs, diagnosis commands, merge/rebase/fast-forward comparison, conflict recovery, and recall questions |
 
 ## Planned reading routes
@@ -38,6 +39,8 @@ content exists, not as empty placeholders.
 
 ```text
 themes/
+├── command-line-interface/
+│   └── index.md
 ├── git-collaboration/
 │   └── index.md
 ├── input-validation/

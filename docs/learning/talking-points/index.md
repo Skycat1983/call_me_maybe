@@ -17,9 +17,10 @@ living themes.
 
 ## Current learning position
 
-- Latest chronological record: [Waypoint 012 — Talking-points working files](../waypoints/012-2026-11-17-talking-points-working-files.md)
-- Current progress discussion: [Talking points 011 — Pydantic input models](waypoints/011-pydantic-input-models.md)
+- Latest chronological record: [Waypoint 014 — CLI input shell](../waypoints/014-2026-11-17-cli-input-shell.md)
+- Current progress discussion: [Talking points 014 — CLI input shell](waypoints/014-cli-input-shell.md)
 - Current input theme: [Input validation and data models](themes/input-validation/index.md)
+- Current CLI theme: [Command-line interface](themes/command-line-interface/index.md)
 - Current tooling theme: [Python project tooling](themes/python-tooling/index.md)
 - Current Git collaboration theme: [Branch reconciliation](themes/git-collaboration/index.md)
 - Current code and SDK theme: [LLM SDK and `inspect_sdk`](themes/llm-sdk/index.md)

@@ -138,3 +138,37 @@ to `/tmp/call-me-maybe-venv`; project-level uv settings keep its cache under
 `/tmp`; and VS Code workspace settings select the linked interpreter, expose
 the local SDK source, and pass the storage variables to editor processes and
 new integrated terminals.
+
+## I-006: Pytest console-script entry could not import the local `src` package
+
+- Status: Resolved
+- Severity: Was blocking the `make test` target
+- Observed: JSON-loader implementation before Waypoint 013
+- Resolved: [Waypoint 013](../learning/waypoints/013-2026-11-17-json-loading-boundary.md)
+
+### Evidence
+
+The command used by the current Make target fails during test collection:
+
+```text
+uv run pytest tests/test_models.py
+ModuleNotFoundError: No module named 'src'
+```
+
+Launching the same installed pytest through the selected Python interpreter
+passes all existing tests:
+
+```text
+uv run python -m pytest tests/test_models.py
+13 passed
+```
+
+The tests and application imports are valid. The observed difference is the
+entry path: `python -m pytest` starts with the project directory on Python's
+module search path, while the pytest console script in this environment does
+not make the local package importable.
+
+### Resolution
+
+The Makefile test recipe now invokes `uv run python -m pytest`. The repaired
+target collected and passed all 22 model and loader tests.

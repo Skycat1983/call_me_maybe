@@ -4,8 +4,8 @@ Last reviewed: 2026-11-17
 
 ## Current objective
 
-Understand the first strict Pydantic input models, then implement JSON file
-loading and clear validation errors without involving the LLM.
+Understand the completed CLI input shell, then define the exact output record
+and JSON-writing boundary without involving the LLM.
 
 ## Completed
 
@@ -73,22 +73,30 @@ loading and clear validation errors without involving the LLM.
 - Added an explicit `Files to have open` working set to every waypoint and
   thematic discussion guide, with permanent agent, template, and validation
   rules for maintaining it.
+- Added a generic JSON-loading boundary with specific public prompt and
+  function-definition loaders and clear chained `InputLoadError` failures.
+- Added nine focused loader tests covering supplied files, file access, text
+  decoding, JSON parsing, top-level structure, empty input, and invalid items.
+- Repaired the Make test entry point; all 22 model and loader tests pass.
+- Added the executable `python -m src` shell with documented defaults,
+  explicit path overrides, typed `CliPaths`, and narrow expected-error
+  handling.
+- Added eight focused CLI tests covering parsing, help, syntax errors, input
+  errors, streams, exit codes, and unexpected exceptions; all 30 tests pass.
 
 ## In progress
 
-- Discuss Waypoint 011 and trace how raw dictionaries become nested validated
-  model instances.
+- Discuss Waypoint 014 and trace how shell arguments become typed paths,
+  validated inputs, stream output, and process exit codes.
 
 ## Next
 
-1. Use the [Waypoint 011 discussion](../learning/talking-points/waypoints/011-pydantic-input-models.md)
-   for the completed implementation round.
-2. Use the [input-validation theme](../learning/talking-points/themes/input-validation/index.md)
-   for Pydantic concepts, code, tests, and current boundaries.
-3. Implement JSON loaders for prompts and function definitions.
-4. Add tests for missing files, invalid JSON, wrong top-level values, invalid
-   list items, and successful loading.
-5. Add the CLI entry point only after the loading boundary has clear errors.
+1. Use the [Waypoint 014 discussion](../learning/talking-points/waypoints/014-cli-input-shell.md)
+   to trace the completed command-line boundary.
+2. Use the [CLI theme](../learning/talking-points/themes/command-line-interface/index.md)
+   for module entry, parsing, typed paths, streams, and exit-code concepts.
+3. Define the strict output-record model and parameter-value types.
+4. Implement and test the JSON-writing boundary without loading the LLM.
 
 ## Blockers
 

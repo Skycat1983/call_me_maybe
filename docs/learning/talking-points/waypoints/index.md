@@ -21,6 +21,8 @@ work. The full chronological evidence remains in `docs/learning/waypoints/`.
 | 008 | [Editor navigation and environment storage](008-editor-navigation-and-environment-storage.md) | Interpreter selection, `/tmp` storage, Pylance, and Go to Definition |
 | 009 | [Project configuration and lockfile](009-project-configuration-and-lockfile.md) | TOML provenance, dependency categories, uv resolution, and synchronization |
 | 011 | [Pydantic input models](011-pydantic-input-models.md) | Runtime validation, nested models, supported value types, strict fields, and focused tests |
+| 013 | [JSON loading boundary](013-json-loading-boundary.md) | File access, JSON parsing, generic validation, exception chaining, item indices, and focused loader tests |
+| 014 | [CLI input shell](014-cli-input-shell.md) | Module entry, argparse, typed path configuration, streams, exit codes, and clean expected errors |
 
 Waypoints [010](../../waypoints/010-2026-11-13-talking-points-architecture.md)
 and [012](../../waypoints/012-2026-11-17-talking-points-working-files.md) are
