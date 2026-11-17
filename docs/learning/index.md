@@ -5,7 +5,7 @@ meaningful waypoint.
 
 ## How the record is organized
 
-The documentation has two complementary layers:
+The documentation has three complementary layers:
 
 1. **Waypoint logs** preserve the chronological learning journey: what we
    worked on, questions asked, answers reached, evidence gathered, decisions
@@ -15,6 +15,9 @@ The documentation has two complementary layers:
    `docs/reference/`, living conversational guides in
    `docs/learning/talking-points/themes/`, and future implementation designs
    in `docs/design/`.
+3. **Evidence captures** preserve selected primary command or experiment
+   output that supports a waypoint or thematic explanation without turning
+   the talking point itself into a terminal transcript.
 
 A waypoint should link to the thematic pages it created or changed. Thematic
 pages should link back to a waypoint when historical context matters.
@@ -47,6 +50,8 @@ The next waypoint ID is **012**.
 - [Learning roadmap](roadmap.md): the intended sequence of concepts and work.
 - [Talking-points hub](talking-points/index.md): chronological voice-mode
   discussions and living topic-centered learning routes.
+- [Learning evidence](evidence/index.md): curated primary command and
+  experiment output linked to its interpretation.
 
 ## Current thematic documents
 

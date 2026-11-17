@@ -6,6 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 
 ParameterType = Literal["string", "number", "boolean"]
+# declarative
 
 
 class PromptInput(BaseModel):

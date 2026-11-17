@@ -39,6 +39,8 @@ imitate docstrings.
 - `docs/reference/`: canonical reusable technical facts.
 - `docs/project/`: current status, tasks, open questions, and known issues.
 - `docs/learning/waypoints/`: chronological records of meaningful progress.
+- `docs/learning/evidence/`: curated primary command and experiment output
+  that supports waypoints and thematic explanations.
 - `docs/learning/talking-points/waypoints/`: discussion guides for individual
   chronological waypoints.
 - `docs/learning/talking-points/themes/`: living, topic-centered learning
@@ -53,6 +55,11 @@ updated in place.
 Talking points are a conversational learning layer, not a substitute for
 requirements or canonical references. Link to the canonical source instead of
 duplicating long explanations unnecessarily.
+
+Evidence captures are not talking points. Retain only small, meaningful,
+sanitized captures; record their command, date, environment, exit-status
+knowledge, omissions, and related learning. Keep routine generated output in
+`/tmp` rather than committing it.
 
 Detailed editorial rules and templates are in
 `docs/learning/talking-points/maintenance.md`.

@@ -16,6 +16,7 @@ Read:
 - the companion waypoint;
 - `experiments/inspect_sdk.py`;
 - [LLM SDK reference](../../../reference/llm-sdk.md);
+- [2026-11-17 CPU terminal evidence](../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md);
 - [open questions](../../../project/questions.md);
 - [known issues](../../../project/issues.md).
 
@@ -52,6 +53,14 @@ tokenizer files, and one logits vector.
 | 151,936 logits | One raw score exists per vocabulary token ID. |
 | Logits took 0.301 seconds | One CPU forward pass is fast enough for experiments. |
 | Top tokens were natural-language fragments | The bare prompt lacked function definitions and output instructions. |
+
+## Later repeat evidence
+
+The [2026-11-17 terminal capture](../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md)
+reproduced the stable results: token IDs, tensor properties, decode shapes,
+tokenizer-file sizes, logit count, and top candidate texts. Construction and
+logits timings changed, which is expected because neither run was a controlled
+performance benchmark.
 
 ## Discussion prompts
 

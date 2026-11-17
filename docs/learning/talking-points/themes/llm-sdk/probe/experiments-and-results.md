@@ -4,7 +4,7 @@
 - Theme: LLM SDK and `inspect_sdk`
 - Depth: Runtime evidence
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 - Prerequisites: [Probe overview](index.md)
 
 ## The two real experiments
@@ -126,6 +126,14 @@ only asked a natural-language question. It did not tell the model:
 
 The run therefore tested next-token scoring, not semantic function selection.
 
+## Later reproduction evidence
+
+A [curated terminal capture from 2026-11-17](../../../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md)
+reproduced the same structural and model observations. It measured model
+construction at 19.244 seconds and the logits call at 0.236 seconds, compared
+with 18.419 and 0.301 seconds in the earlier recorded run. Those differences
+are ordinary observations, not evidence of changed behavior or a benchmark.
+
 ## What the experiment proves—and what it does not
 
 ### Supported by execution
@@ -155,5 +163,6 @@ The run therefore tested next-token scoring, not semantic function selection.
 - [Probe source walkthrough](source-walkthrough.md)
 - [Questions and discussion](questions-and-discussion.md)
 - [Detailed runtime flow](../runtime-flow/index.md)
+- [2026-11-17 terminal evidence](../../../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md)
 - [Waypoint 007](../../../../waypoints/007-2026-11-12-explicit-cpu-sdk-probe.md)
 

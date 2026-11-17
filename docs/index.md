@@ -43,6 +43,8 @@ These documents describe the work as it stands now.
   recording rules, and links to thematic knowledge.
 - [Learning roadmap](learning/roadmap.md): the explain-first sequence for the
   rest of the project.
+- [Learning evidence](learning/evidence/index.md): curated terminal and
+  experiment output supporting recorded observations.
 - [Talking-points hub](learning/talking-points/index.md): chronological
   voice-mode discussions and living topic-centered learning routes.
 - [Python project tooling](learning/talking-points/themes/python-tooling/index.md):

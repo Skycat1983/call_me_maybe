@@ -130,6 +130,7 @@ validation.
 | [Experiments and results](probe/experiments-and-results.md) | Default and CPU runs, observations, and evidence boundaries |
 | [Probe questions](probe/questions-and-discussion.md) | FAQs, misconceptions, voice prompts, guidance, and glossary |
 | [Runtime-flow map](runtime-flow/index.md) | Whole execution map and links to six focused stage documents |
+| [2026-11-17 terminal evidence](../../../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md) | Curated primary output from a later successful explicit-CPU run |
 | [Canonical SDK reference](../../../../reference/llm-sdk.md) | Concise reusable facts about the SDK interface and observed behavior |
 
 ## Related learning

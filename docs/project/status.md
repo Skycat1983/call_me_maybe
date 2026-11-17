@@ -1,6 +1,6 @@
 # Project Status
 
-Last reviewed: 2026-11-13
+Last reviewed: 2026-11-17
 
 ## Current objective
 
@@ -100,6 +100,7 @@ loading and clear validation errors without involving the LLM.
 - [Requirements overview](../requirements/overview.md)
 - [Task plan](tasks.md)
 - [Learning log](../learning/index.md)
+- [Learning evidence](../learning/evidence/index.md)
 - [Talking-points hub](../learning/talking-points/index.md)
 - [Open questions](questions.md)
 - [Known issues](issues.md)

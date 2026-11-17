@@ -10,6 +10,7 @@ living themes.
 |---|---|
 | Discuss recently completed work | [Waypoint discussions](waypoints/index.md) |
 | Learn or revisit a topic | [Thematic discussions](themes/index.md) |
+| Inspect primary command or experiment output | [Learning evidence](../evidence/index.md) |
 | Understand current project direction | [Project status](../../project/status.md) |
 | Review chronological progress | [Learning log](../index.md) |
 | Maintain or reorganize talking points | [Maintenance guide](maintenance.md) |
@@ -22,6 +23,7 @@ living themes.
 - Current tooling theme: [Python project tooling](themes/python-tooling/index.md)
 - Current code and SDK theme: [LLM SDK and `inspect_sdk`](themes/llm-sdk/index.md)
 - Current deep technical guide: [Full `inspect_sdk` flow](themes/llm-sdk/runtime-flow/index.md)
+- Current SDK terminal evidence: [2026-11-17 explicit-CPU run](../evidence/llm-sdk/2026-11-17-inspect-sdk-cpu.md)
 
 The structural migration is complete. Chronological companions are under
 `waypoints/`; living subject guides are under `themes/`. Waypoint 010 records

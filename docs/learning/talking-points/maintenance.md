@@ -2,7 +2,7 @@
 
 - Kind: Documentation maintenance
 - Status: Living
-- Last reviewed: 2026-11-13
+- Last reviewed: 2026-11-17
 
 This guide defines how chronological and thematic talking points are created,
 updated, split, linked, and validated. Repository-wide agent behavior is
@@ -51,6 +51,7 @@ Thematic documents are living material and should show a last-reviewed date.
 | Information | Destination |
 |---|---|
 | What happened during a particular round | Waypoint log |
+| Primary output supporting an observation | Learning evidence |
 | What to discuss about that round | Waypoint talking points |
 | Current explanation of a reusable topic | Thematic talking points |
 | Mandatory behavior | Requirements |
@@ -58,6 +59,27 @@ Thematic documents are living material and should show a last-reviewed date.
 | Current unresolved question | Project question register |
 | Reproducible observed defect | Known-issue register |
 | Immediate objective and next actions | Project status |
+
+## Learning evidence
+
+Location:
+
+```text
+docs/learning/evidence/
+```
+
+Evidence captures contain curated primary output from meaningful commands or
+experiments. Organize them by subject rather than by terminal program, then
+link them from the relevant waypoint and thematic discussion.
+
+Retain a capture only when it supports a meaningful experiment, reproducible
+failure or repair, runtime observation, or project decision. Routine test,
+lint, and installation output belongs in `/tmp` unless it adds durable value.
+
+Each capture should identify its date, command, environment, exit-status
+knowledge, curation or omissions, and related learning. Remove shell prompts,
+control characters, unrelated noise, and all credentials or secrets. Preserve
+dated differences between runs instead of replacing older observations.
 
 ## Progressive disclosure within a theme
 
@@ -200,5 +222,6 @@ After a relevant experiment or implementation step:
 - [Talking-points hub](index.md)
 - [Waypoint discussions](waypoints/index.md)
 - [Thematic discussions](themes/index.md)
+- [Learning evidence](../evidence/index.md)
 - [Learning log](../index.md)
 - [Project documentation](../../index.md)
